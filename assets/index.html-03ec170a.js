@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3d7f58bc","path":"/git/standard/","title":"Git 提交规范","lang":"zh-CN","frontmatter":{"title":"Git 提交规范","description":"Git 提交规范"},"headers":[],"git":{"updatedTime":1671866187000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"git/standard/index.md"}');export{t as data};
