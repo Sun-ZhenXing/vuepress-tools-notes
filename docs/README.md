@@ -3,7 +3,7 @@ home: true
 heroImage: /favicon.svg
 actions:
   - text: 开始阅读
-    link: /
+    link: /git/
     type: primary
 features:
   - title: VuePress
@@ -12,3 +12,5 @@ footer: 工具笔记合集，由 @Sun-ZhenXing 创建
 ---
 
 # 工具笔记合集
+
+## [Git](./git/)
