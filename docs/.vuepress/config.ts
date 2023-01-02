@@ -23,6 +23,9 @@ export default defineUserConfig({
     logo: '/favicon.svg',
     repo: `${USER_NAME}${BASE_PATH}`,
     docsDir: 'docs',
+    editLinkText: '在 GitHub 上编辑此页',
+    contributorsText: '贡献者',
+    lastUpdatedText: '上次更新',
     navbar: [
     ],
     sidebar: {
@@ -42,15 +45,27 @@ export default defineUserConfig({
       sup: true,
       footnote: true,
       mark: true,
-      imageLazyload: true,
+      imgLazyload: true,
       tasklist: true,
       katex: true,
       mermaid: true,
       delay: 200,
+      stylize: [
+        {
+          matcher: '@recommend',
+          replacer: ({ tag }) => {
+            if (tag === 'em') return {
+              tag: 'Badge',
+              attrs: { type: 'tip', vertical: 'middle' },
+              content: 'Recommend'
+            }
+          }
+        }
+      ],
     }),
     searchProPlugin({}),
     copyCodePlugin({
-      showInMobile: true,
-    }),
+      showInMobile: true
+    })
   ]
 })
