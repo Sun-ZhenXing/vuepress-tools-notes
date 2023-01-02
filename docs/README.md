@@ -13,4 +13,5 @@ footer: 工具笔记合集，由 @Sun-ZhenXing 创建
 
 # 工具笔记合集
 
-## [Git](./git/)
+1. [Git](./git/)
+2. [Mermaid](./mermaid/)
