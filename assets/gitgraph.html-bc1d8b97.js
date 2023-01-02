@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-dcbe1984","path":"/mermaid/gitgraph.html","title":"Mermaid Git 图","lang":"zh-CN","frontmatter":{"title":"Mermaid Git 图","description":"Mermaid Git 图"},"headers":[],"git":{"updatedTime":1672670890000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"mermaid/gitgraph.md"}');export{t as data};
