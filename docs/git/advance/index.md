@@ -66,3 +66,81 @@ git check-ignore
 !.gitignore
 !Application.class
 ```
+
+## 2. 放弃提交
+
+放弃上一次提交：
+
+```bash
+git reset --soft HEAD^
+# 或者可以
+git reset --soft HEAD~1
+```
+
+放弃若干次提交，`~` 后的数字代表你想放弃的次数：
+
+```bash
+git reset --soft HEAD~2
+```
+
+::: details 放弃提交示例
+
+放弃提交，保留 Add：
+
+```bash
+git reset --soft HEAD^
+```
+
+暂存修改：
+
+```bash
+git stash
+```
+
+签出历史提交：
+
+```bash
+git checkout <commit_id>
+```
+
+最后恢复工作进度：
+
+```bash
+git stash pop
+```
+
+:::
+
+## 3. 高级克隆
+
+### 3.1 指定克隆深度
+
+`--depth` 选项用于指定克隆深度，即保留之前多少次提交，一般克隆项目只用于测试或部署而不需要开发，就不需要保留历史，因为克隆历史需要占用大量网络资源，也会占用不必要的空间：
+
+```bash
+git clone --depth 1 https://github.com/python/cpython.git
+```
+
+### 3.2 指定分支
+
+`--branch` 用于指定分支，如果只需要单个分支也可以使用 `--single-branch` 选项，默认将选择 `origin` 分支。
+
+## 4. 指定标签
+
+可以给某个提交号加标签，即将 tag 绑定到 commit 上：
+
+```bash
+git tag -a v1.2 9fceb02 -m "Release v1.2"
+```
+
+打上 tag 后需要将 tag 上传到远程仓库：
+
+```bash
+git push origin v1.2
+```
+
+如果需要上传全部的 tag，可以一次性上传全部：
+
+```bash
+git push origin --tags
+```
