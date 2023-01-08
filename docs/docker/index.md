@@ -10,6 +10,7 @@ description: Docker 指南
 1. Docker 的基本概念
 2. [安装](./install-docker.md)
 3. [开始使用](./get-started.md)
+4. [Kubernets](./kubernets.md)
 
 ## 2. 有用的信息
 
