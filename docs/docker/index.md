@@ -7,17 +7,22 @@ description: Docker 指南
 
 ## 1. 目录
 
-1. Docker 的基本概念
+1. [Docker 的基本概念](./basic.md)
 2. [安装](./install-docker.md)
 3. [开始使用](./get-started.md)
 4. [Kubernets](./kubernets.md)
 
-## 2. 有用的信息
+## 2. 实践指南
 
-镜像列表：
+1. [Docker 配置远程连接](./projects/docker-remote-context.md)
+
+## 3. 有用的信息
+
+### 3.1 国内镜像列表
+
 - 清华：<https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/>
 
-## 3. 命令速查
+### 3.2 命令速查
 
 | 命令      | 功能 |
 | --------- | ---- |
