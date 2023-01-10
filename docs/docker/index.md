@@ -15,6 +15,7 @@ description: Docker 指南
 ## 2. 实践指南
 
 1. [Docker 配置远程连接](./projects/docker-remote-context.md)
+2. [Docker 搭建深度学习环境](./projects/deeplearning-env.md)
 
 ## 3. 有用的信息
 
