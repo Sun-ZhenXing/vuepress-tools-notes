@@ -14,7 +14,7 @@ description: Docker 指南
 
 ## 2. 实践指南
 
-阅读 [Docker 实践指南](./projects/)
+阅读 [Docker 实践指南](./projects/)。
 
 ## 3. 有用的信息
 
