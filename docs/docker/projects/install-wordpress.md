@@ -1,9 +1,9 @@
 ---
-title: Docker 安装 WordPress
-description: Docker 安装 WordPress
+title: Docker 部署 WordPress
+description: Docker 部署 WordPress
 ---
 
-# Docker 安装 WordPress
+# Docker 部署 WordPress
 
 [[TOC]]
 

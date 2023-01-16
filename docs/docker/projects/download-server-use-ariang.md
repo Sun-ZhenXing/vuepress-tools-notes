@@ -1,9 +1,9 @@
 ---
-title: Docker 搭载 AriaNg 下载服务器
-description: Docker 搭载 AriaNg 下载服务器
+title: Docker 搭建 AriaNg 下载服务器
+description: Docker 搭建 AriaNg 下载服务器
 ---
 
-# Docker 搭载 AriaNg 服务器
+# Docker 搭建 AriaNg 服务器
 
 [[TOC]]
 
