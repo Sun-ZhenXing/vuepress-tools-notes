@@ -151,6 +151,18 @@ ffmpeg -f dshow -i video="${Your_Camera}":audio="${Your_Audio}" -vcodec libx264 
 ffmpeg -list_devices true -f dshow -i dummy
 ```
 
+播放摄像头当前内容：
+
+```bash
+ffplay -f dshow -i video="${Your_Camera}"
+```
+
+也可以同时播放麦克风的内容，但最好戴上耳机，不然可能产生回声：
+
+```bash
+ffplay -f dshow -i video="${Your_Camera}":audio="${Your_Audio}"
+```
+
 :::
 
 测试代码如下，保存为 `index.html`：
