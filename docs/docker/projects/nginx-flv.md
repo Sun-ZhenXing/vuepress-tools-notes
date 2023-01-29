@@ -43,7 +43,7 @@ docker run -itd\
 然后进入容器：
 
 ```bash
-sudo docker exec -it nginx-flv /bin/bash
+docker exec -it nginx-flv /bin/bash
 ```
 
 下面的命令都在容器内执行。

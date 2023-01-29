@@ -47,7 +47,7 @@ define( 'DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', '123456') );
 修改的 PHP 配置，进入容器：
 
 ```bash
-sudo docker exec -it wordpress /bin/bash
+docker exec -it wordpress /bin/bash
 ```
 
 下面的命令执行在 Docker 容器内：
@@ -71,7 +71,7 @@ exit
 然后重启 WordPress 镜像：
 
 ```bash
-sudo docker restart wordpress
+docker restart wordpress
 ```
 
 现在已经配置完成了，打开地址即可访问，上传限制也可以该为你设定的其他值。
@@ -89,7 +89,7 @@ sudo docker restart wordpress
 进入容器：
 
 ```bash
-sudo docker exec -it wordpress /bin/bash
+docker exec -it wordpress /bin/bash
 ```
 
 下面的操作都在容器中进行。

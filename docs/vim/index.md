@@ -19,6 +19,7 @@ git clone https://github.com/vim/vim.git --depth 1
 
 ```bash
 cd vim/src
+
 # 如果之前编译过，清空构建
 # make distclean
 
