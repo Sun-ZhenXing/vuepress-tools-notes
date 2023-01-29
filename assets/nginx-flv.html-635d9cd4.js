@@ -5,7 +5,7 @@ import{_ as c,M as p,p as i,q as r,R as n,N as a,V as t,t as s,a1 as l}from"./fr
     <span class="token parameter variable">-p</span> <span class="token number">8089</span>:8089<span class="token punctuation">\\</span>
     centos:7.9.2009<span class="token punctuation">\\</span>
     /bin/bash
-</code></pre></div><p>然后进入容器：</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> nginx-flv /bin/bash
+</code></pre></div><p>然后进入容器：</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> nginx-flv /bin/bash
 </code></pre></div><p>下面的命令都在容器内执行。</p><h2 id="_2-源码编译" tabindex="-1"><a class="header-anchor" href="#_2-源码编译" aria-hidden="true">#</a> 2. 源码编译</h2><p>更新和安装包：</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>yum update
 
 yum <span class="token function">install</span> gcc
