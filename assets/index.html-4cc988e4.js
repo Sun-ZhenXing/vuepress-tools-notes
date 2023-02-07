@@ -1,0 +1,1 @@
+import{_ as a,M as o,p as s,q as n,N as c,R as e,t as r}from"./framework-bafc524a.js";const _={},d=e("h1",{id:"zsh-指南",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#zsh-指南","aria-hidden":"true"},"#"),r(" Zsh 指南")],-1);function l(h,i){const t=o("AutoCatalog");return s(),n("div",null,[d,c(t)])}const m=a(_,[["render",l],["__file","index.html.vue"]]);export{m as default};
