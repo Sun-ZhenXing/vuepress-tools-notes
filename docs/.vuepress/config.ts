@@ -29,8 +29,7 @@ export default defineUserConfig({
     lastUpdatedText: '上次更新',
     navbar: [
     ],
-    sidebar: {
-    }
+    sidebar: 'auto'
   }),
   plugins: [
     mdEnhancePlugin({
@@ -57,13 +56,13 @@ export default defineUserConfig({
           replacer: ({ tag }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'tip', vertical: 'middle' },
+              attrs: { type: 'tip' },
               content: 'Recommend'
             }
           }
         }
       ],
-    }),
+    }, false),
     searchProPlugin({}),
     autoCatalogPlugin({}),
     copyCodePlugin({
