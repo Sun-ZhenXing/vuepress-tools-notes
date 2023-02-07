@@ -52,12 +52,12 @@ export default defineUserConfig({
       delay: 200,
       stylize: [
         {
-          matcher: '@recommend',
+          matcher: '@TODO',
           replacer: ({ tag }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'tip' },
-              content: 'Recommend'
+              attrs: { type: 'danger' },
+              content: 'TODO'
             }
           }
         }
