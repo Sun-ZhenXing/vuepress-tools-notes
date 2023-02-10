@@ -33,6 +33,26 @@ code --list-extensions
 code --list-extensions --show-versions
 ```
 
+手动备份插件配置（加上 `--show-versions` 包含版本）：
+
+```bash
+code --list-extensions > extensions-list.txt
+```
+
+恢复备份：
+
+```bash
+awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
+```
+
+::: info 如何在 Windows 使用 Linux GNU 工具
+
+安装 Git 后将 Git 携带的 GNU 软件路径（如 `C:\Program Files\Git\usr\bin`）加入路径即可。
+
+:::
+
+作者的 `extensions-list.txt` 文件可在 [GitHub 仓库](https://github.com/Sun-ZhenXing/vuepress-tools-notes/tree/main/docs/vscode/extensions-list.txt) 中找到。
+
 ## 2. 插件收藏夹
 
 ::: tip 完善推荐表
