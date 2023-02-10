@@ -1,0 +1,1 @@
+import{_ as t,M as a,p as c,q as n,N as s,R as e,t as r}from"./framework-bafc524a.js";const d={},_=e("h1",{id:"vs-code",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vs-code","aria-hidden":"true"},"#"),r(" VS Code")],-1);function l(i,h){const o=a("AutoCatalog");return c(),n("div",null,[_,s(o)])}const m=t(d,[["render",l],["__file","index.html.vue"]]);export{m as default};
