@@ -9,9 +9,11 @@ description: WSL2 中搭建深度学习环境
 
 [[TOC]]
 
-## 1. 为什么使用 Docker
+## 1. WSL2 进行深度学习的最佳实践
 
-WSL2 Docker 内执行速度大约为 Ubuntu 主机的 80%，带来了一些性能牺牲。但是 Docker 的优势远比这点损失来的多：
+【Q】为什么使用 Docker 进行深度学习？
+
+【A】WSL2 Docker 内执行速度大约为 Ubuntu 主机的 80%，带来了一些性能牺牲。但是 Docker 的优势远比这点损失来的多：
 
 - 随时启动和停止一个环境
 - 环境与主机隔离，主机可以正在做别的事情
@@ -19,13 +21,73 @@ WSL2 Docker 内执行速度大约为 Ubuntu 主机的 80%，带来了一些性�
 - 随意切换 CUDA 版本
 - 随时备份和恢复一个环境，可将镜像迁移到不同机器上运行
 
-## 2. 如何使用
+【Q】为什么使用 WSL2 进行深度学习？
 
-条件：
+【A】可以同时使用 Linux 的训练环境和 Windows 的便捷界面，而且互不影响，可以协同工作。
+
+【Q】如果我的数据集较大（或者在外置磁盘中），应该如何操作？
+
+【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。
+
+【Q】如果我想使用 `tensorboard` 或者 `jupyter` 怎么办？
+
+【A】映射端口即可。见下文。
+
+【Q】如果我想快速存取文件，例如取出权重文件，或指定测试文件，但是这个路径不在共享路径下怎么办？
+
+【A】使用 `docker cp` 复制文件，可以从主机复制到容器，也可以从容器复制到主机。
+
+还可以开启 HTTP 服务或者 FTP 服务，可以互相访问内容。容器可以直接读取主机监听的端口，从而可以直接 `wget` 下载主机的文件。开启 HTTP 服务：
+
+```bash
+python3 -m http.server 8000
+```
+
+也有许多的第三方软件，可在不同环境共享文件。
+
+【Q】如果需要不同的依赖环境，有哪些做法？
+
+【A】大致可有下面两种做法：
+
+1. 在不同的容器内进行开发，PyTorch 拉取 PyTorch 镜像，TensorFlow 拉取 TensorFlow 镜像，可以拉取各种不同版本的镜像，单独来开发，环境全部相互隔离。缺点是占用空间较大，不过这点空间和训练集相比可以忽略。
+2. 在同一个基础容器（指 CUDA 容器，普通容器不行）内使用 Miniconda 创建虚拟环境开发，好处是操作简单，占用小。缺点是无法隔离 CUDA、cuDNN 等环境，不过影响不大，因为现代框架支持性较好，可提供不同版本的框架。
+
+各种不同的镜像拉取示例：
+
+```bash
+docker pull tensorflow/tensorflow:2.11.0
+docker pull pytorch/pytorch:1.13.1-cuda11.6-cudnn8-runtime
+docker pull nvidia/cuda:11.8.0-base-ubuntu22.04
+```
+
+如果本地网络较差，可使用代理拉取，也可以配置 Docker 镜像，或者在云端拉取然后将打包回传到本地。
+
+【Q】Docker 没有 GUI，因此无法使用 `cv2.imshow`，有时还不能导入 `cv2`，怎么解决？
+
+无法导入 OpenCV 时，确保 OpenCV 的安装顺序，或者只安装有 `-headless` 后缀的版本。
+
+```bash
+pip3 install opencv-python
+pip3 install opencv-contrib-python
+pip3 install opencv-python-headless
+pip3 install opencv-contrib-python-headless
+```
+
+无法显示图片，这个除非有图形界面，使用 `cv2.imwrite`，然后在 Windows 下查看即可。
+
+【Q】如果希望备份整个开发环境，应该怎么办？
+
+【A】Docker 可将容器导出为镜像，镜像可以随时备份为文件，可以迁移到其他电脑或其他任何环境。使用 `docker commit` 可导出容器为镜像，`docker save` 可将镜像压缩为一个文件。还可以使用 Docker Hub 共享镜像到社区。
+
+如果你希望把整个 WSL2 都备份了，可以使用 `wsl --export` 来导出为一个文件，详情见 [迁移 Docker 的位置](./migrate-docker-location.md)。
+
+## 2. 条件准备
 
 - 主机是现代 CPU 且是 x86 架构，安装有现代的 NVIDIA 显卡
 - 需要 Windows 10 以上并安装有 WSL2。如果不了解如何安装可参考网络
 - 首先需要安装 Docker Desktop，这同时会安装 WSL2 的两个容器 `docker-desktop-data` 和 `docker-desktop`
+
+## 3. 如何使用
 
 现在我们在主机查看 NVIDIA 显卡信息：
 
@@ -52,7 +114,7 @@ nvidia-smi
 
 这是因为 WSL2 内核支持的 Docker 已经支持 `--gpus` 了（Docker 版本大于 19.03 即可），再也不需要 `nvidia-docker2` 来工作了。
 
-## 3. 安装 CUDA 容器
+## 4. 安装 CUDA 容器
 
 拉取 CUDA 11.6 Ubuntu 20.04 镜像（也可以直接拉取 PyTorch 镜像）：
 
@@ -92,7 +154,7 @@ docker exec -it ub-cu11.6 /bin/bash
 
 现在和 Linux 系统一致了。
 
-## 4. 在容器内安装深度学习环境
+## 5. 在容器内安装深度学习环境
 
 更新镜像源：
 
@@ -138,7 +200,10 @@ python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 # 配置负载均衡的 PyPI 镜像，可快速选择较快的镜像源
 pip3 config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirrors.aliyun.com/pypi/simple/ https://repo.huaweicloud.com/repository/pypi/simple/ https://mirrors.bfsu.edu.cn/pypi/web/simple/"
+pip3 install opencv-python
+pip3 install opencv-contrib-python
 pip3 install opencv-python-headless
+pip3 install opencv-contrib-python-headless
 ```
 
 安装 PyTorch：
