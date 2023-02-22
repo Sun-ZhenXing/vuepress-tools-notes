@@ -29,9 +29,17 @@ description: WSL2 中搭建深度学习环境
 
 【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。
 
-【Q】如果我想使用 `tensorboard` 或者 `jupyter` 怎么办？
+【Q】如果我想使用 TensorBoard 或者 Jupyter 怎么办？
 
-【A】映射端口即可。见下文。
+【A】映射端口即可，见下文。如果你希望使用 Matplotlib 等绘图工具，建议在 Jupyter 中进行。
+
+【Q】如果我希望使用 IDE 在容器内开发程序，并进行调试，应该怎么做？
+
+【A】例如使用 VS Code 开发，需要安装 Docker 和远程开发插件。请参考 [VS Code 使用 Docker](../projects/vscode-use-docker.md)。同样的 PyCharm 和其他 JetBrain 系列 IDE 也支持容器内开发。推荐使用挂载到 Windows 下的路径进行开发，然后使用远程开发能力，在 Windows 下实时预览生成结果。
+
+【Q】我在创建容器之后想修改容器的配置，如增加挂载和映射端口应该怎么做？
+
+【A】请参考 [基于 WSL2 的 Docker 配置说明](./wsl-docker-config.md)。
 
 【Q】如果我想快速存取文件，例如取出权重文件，或指定测试文件，但是这个路径不在共享路径下怎么办？
 
@@ -40,7 +48,7 @@ description: WSL2 中搭建深度学习环境
 还可以开启 HTTP 服务或者 FTP 服务，可以互相访问内容。容器可以直接读取主机监听的端口，从而可以直接 `wget` 下载主机的文件。开启 HTTP 服务：
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 ```
 
 也有许多的第三方软件，可在不同环境共享文件。
@@ -156,7 +164,7 @@ docker exec -it ub-cu11.6 /bin/bash
 
 ## 5. 在容器内安装深度学习环境
 
-更新镜像源：
+更新镜像源（以阿里云为例）：
 
 ```bash
 mv /etc/apt/sources.list /etc/apt/sources.list-bak
@@ -216,7 +224,33 @@ pip3 install torch torchvision torchaudio --extra-index-url https://download.pyt
 
 ```bash
 pip3 install ultralytics
-pip3 uninstall opencv-python
-pip3 uninstall opencv-python-headless
-pip3 install opencv-python-headless
+```
+
+测试 YOLOv8 在 3070Ti 上的速度：
+
+```log
+admin@f292841cc5bf:~$ yolo predict model=yolov8x.pt source="bus.jpg"
+Ultralytics YOLOv8.0.34 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192MiB)
+YOLOv8x summary (fused): 268 layers, 68200608 parameters, 0 gradients, 257.8 GFLOPs
+
+image 1/1 /home/admin/bus.jpg: 640x480 5 persons, 1 bicycle, 1 bus, 32.4ms
+Speed: 9.3ms pre-process, 32.4ms inference, 2.3ms postprocess per image at shape (1, 3, 640, 640)
+admin@f292841cc5bf:~$ yolo predict model=yolov8x.pt source="bus.jpg"
+Ultralytics YOLOv8.0.34 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192MiB)
+YOLOv8x summary (fused): 268 layers, 68200608 parameters, 0 gradients, 257.8 GFLOPs
+
+image 1/1 /home/admin/bus.jpg: 640x480 5 persons, 1 bicycle, 1 bus, 32.1ms
+Speed: 2.0ms pre-process, 32.1ms inference, 2.0ms postprocess per image at shape (1, 3, 640, 640)
+admin@f292841cc5bf:~$ yolo predict model=yolov8s.pt source="bus.jpg"
+Ultralytics YOLOv8.0.34 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192MiB)
+YOLOv8s summary (fused): 168 layers, 11156544 parameters, 0 gradients, 28.6 GFLOPs
+
+image 1/1 /home/admin/bus.jpg: 640x480 4 persons, 1 bus, 13.0ms
+Speed: 1.9ms pre-process, 13.0ms inference, 2.3ms postprocess per image at shape (1, 3, 640, 640)
+admin@f292841cc5bf:~$ yolo predict model=yolov8n.pt source="bus.jpg"
+Ultralytics YOLOv8.0.34 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192MiB)
+YOLOv8n summary (fused): 168 layers, 3151904 parameters, 0 gradients, 8.7 GFLOPs
+
+image 1/1 /home/admin/bus.jpg: 640x480 4 persons, 1 bus, 1 stop sign, 10.5ms
+Speed: 2.3ms pre-process, 10.5ms inference, 2.1ms postprocess per image at shape (1, 3, 640, 640)
 ```
