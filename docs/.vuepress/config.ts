@@ -66,7 +66,7 @@ export default defineUserConfig({
     docsearchPlugin({
       appId: 'DF0MWQNCKW',
       apiKey: 'fde5c0f2e0052f31234eb16cbb3dfcc3',
-      indexName: 'alexsun',
+      indexName: 'alexsun_vuepress_tools_notes',
       placeholder: '搜索文档',
       translations: {
         button: {
