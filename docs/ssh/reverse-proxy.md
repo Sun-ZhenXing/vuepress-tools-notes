@@ -124,7 +124,7 @@ autossh -M 7281 -fCNR 7280:localhost:22 root@123.123.123.123
 autossh -M 7281 -fN \
     -o "PubkeyAuthentication=yes" \
     -o "StrictHostKeyChecking=false" \
-    -o"PasswordAuthentication=no" \
+    -o "PasswordAuthentication=no" \
     -o "ServerAliveInterval 60" \
     -o "ServerAliveCountMax 3" \
     -R 123.123.123.123:7280:localhost:22 \
