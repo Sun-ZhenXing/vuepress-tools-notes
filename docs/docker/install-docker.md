@@ -5,13 +5,25 @@ description: Docker 指南
 
 # Docker 安装
 
+[[TOC]]
+
 ## 1. Debian/Ubuntu Docker 安装
 
-使用阿里云镜像进行安装：
+### 1.1 自动安装
+
+这是推荐做法，例如使用阿里云镜像进行安装：
 
 ```bash
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 ```
+
+或者使用国内 DaoCloud 镜像：
+
+```bash
+curl -sSL https://get.daocloud.io/docker | sh
+```
+
+### 1.2 手动安装
 
 如果已经安装过旧版本的 Docker，请先卸载：
 
