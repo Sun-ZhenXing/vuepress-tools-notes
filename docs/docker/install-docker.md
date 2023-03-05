@@ -49,6 +49,14 @@ sudo apt-get install \
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
+### 1.3 可选：给普通用户配置权限
+
+```bash
+sudo sed -i s/SocketMode=0660/SocketMode=0666/g /usr/lib/systemd/system/docker.socket
+sudo systemctl daemon-reload
+sudo systemctl restart docker.socket
+```
+
 ## 2. CentOS/RedHat Docker 安装
 
 ## 3. Windows Docker 安装
