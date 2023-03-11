@@ -9,12 +9,6 @@ Docker 部署 RTMP 流媒体服务器，在一端使用 RTMP 协议推流，并�
 
 [[TOC]]
 
-::: warning TODO
-
-使用 `Dockerfile` 来完成构建。
-
-:::
-
 ## 1. 创建 Docker 容器
 
 ::: tabs#sys
@@ -30,11 +24,11 @@ docker pull ubuntu:20.04
 创建 Docker 容器：
 
 ```bash
-docker run -itd\
-    --name nginx-flv\
-    -p 1935:1935\
-    -p 8089:8089\
-    ubuntu:20.04\
+docker run -itd \
+    --name nginx-flv \
+    -p 1935:1935 \
+    -p 8089:8089 \
+    ubuntu:20.04 \
     /bin/bash
 ```
 
@@ -49,11 +43,11 @@ docker pull centos:7.9.2009
 创建 Docker 容器：
 
 ```bash
-docker run -itd\
-    --name nginx-flv\
-    -p 1935:1935\
-    -p 8089:8089\
-    centos:7.9.2009\
+docker run -itd \
+    --name nginx-flv \
+    -p 1935:1935 \
+    -p 8089:8089 \
+    centos:7.9.2009 \
     /bin/bash
 ```
 
@@ -116,7 +110,7 @@ make install
 下面修改 `/usr/local/nginx/conf/nginx.conf`：
 
 ```nginx
-worker_processes  2;
+worker_processes auto;
 
 events {
     worker_connections  1024;
@@ -232,4 +226,55 @@ ffplay -f dshow -i video="${Your_Camera}":audio="${Your_Audio}"
 </body>
 
 </html>
+```
+
+## 4. 使用 Dockerfile
+
+推荐使用 `Dockerfile`，下载源代码，保存上述配置文件为 `nginx.conf`，然后构建。
+
+```bash
+curl -Lj -o nginx-1.23.3.tar.gz http://nginx.org/download/nginx-1.23.3.tar.gz
+curl -Lj -o nginx-http-flv-module-master.zip https://github.com/winshining/nginx-http-flv-module/archive/refs/heads/master.zip
+```
+
+下面是使用 Ubuntu 镜像为例的 `Dockerfile` 文件：
+
+```dockerfile
+FROM ubuntu:20.04
+WORKDIR /app
+
+COPY nginx-1.23.3.tar.gz .
+COPY nginx-http-flv-module-master.zip .
+
+RUN apt update && apt upgrade -y \
+    && apt install -y gcc wget unzip make tar \
+    && apt install -y openssl libssl-dev \
+    && apt install -y libpcre3 libpcre3-dev \
+    && apt install -y zlib1g-dev \
+    && tar -zxvf nginx-1.23.3.tar.gz \
+    && unzip nginx-http-flv-module-master.zip \
+    && rm nginx-http-flv-module-master.zip -rf \
+    && rm nginx-1.23.3.tar.gz -rf \
+    && cd nginx-1.23.3 \
+    && ./configure --with-http_ssl_module --with-http_secure_link_module --add-module=../nginx-http-flv-module-master \
+    && make \
+    && make install \
+    && cd ..
+
+EXPOSE 8089 1935
+
+CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
+```
+
+执行命令构建并启动：
+
+```bash
+docker build -t nginx-flv:v1 .
+docker run -itd \
+    --name nginx-flv \
+    -v $PWD/nginx.conf:/usr/local/nginx/conf/nginx.conf \
+    -v $PWD/log:/var/log/nginx \
+    -p 1935:1935 \
+    -p 8089:8089 \
+    nginx-flv:v1
 ```
