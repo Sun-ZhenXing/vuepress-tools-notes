@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-8dd6e682","path":"/mermaid/","title":"Mermaid","lang":"zh-CN","frontmatter":{"title":"Mermaid","description":"Mermaid"},"headers":[],"git":{"updatedTime":1672670890000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"mermaid/index.md"}');export{e as data};
