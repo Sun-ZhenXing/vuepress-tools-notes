@@ -11,5 +11,4 @@ Mermaid 允许你使用文本和代码创建图表和可视化。
 
 如果你熟悉 Markdown，那么学习 Mermaid 的语法应该没有问题。
 
-1. [流程图](./flowchart.md)
-2. [Git 图](./gitgraph.md)
+<AutoCatalog />

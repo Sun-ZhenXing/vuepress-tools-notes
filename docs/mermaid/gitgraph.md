@@ -5,6 +5,8 @@ description: Mermaid Git 图
 
 # Mermaid Git 图
 
+[[TOC]]
+
 Git 图形是不同分支上的 Git 提交和 Git 操作（命令）的图形化表示。
 
 这类图表对开发者和开发团队分享他们的 Git 分支策略特别有帮助。例如，它使人们更容易直观地了解 Git 流程的工作原理。
