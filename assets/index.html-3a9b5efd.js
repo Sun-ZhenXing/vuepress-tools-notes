@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-744e09ce","path":"/vim/","title":"Vim","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"编译安装 Vim","slug":"编译安装-vim","link":"#编译安装-vim","children":[]}],"git":{"updatedTime":1679384906000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":3}]},"filePathRelative":"vim/index.md"}');export{e as data};

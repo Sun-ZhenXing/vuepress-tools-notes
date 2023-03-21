@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4ada3ff3","path":"/shell/linux/","title":"Linux 命令合集","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1679384906000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":2}]},"filePathRelative":"shell/linux/index.md"}');export{e as data};

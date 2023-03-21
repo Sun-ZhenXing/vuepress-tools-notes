@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5e185c10","path":"/shell/zsh/","title":"Zsh 指南","lang":"zh-CN","frontmatter":{"title":"Zsh 指南","description":"Zsh 指南"},"headers":[],"git":{"updatedTime":1675784707000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/zsh/index.md"}');export{e as data};

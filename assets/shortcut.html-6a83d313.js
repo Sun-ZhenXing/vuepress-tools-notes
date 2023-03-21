@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-755ce5a7","path":"/vscode/shortcut.html","title":"VS Code 快捷键","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"设置区","slug":"设置区","link":"#设置区","children":[]}],"git":{"updatedTime":1679384906000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"vscode/shortcut.md"}');export{e as data};
