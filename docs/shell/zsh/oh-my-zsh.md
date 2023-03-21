@@ -1,8 +1,3 @@
----
-title: Oh-My-Zsh 指南
-description: Oh-My-Zsh 指南
----
-
 # Oh-My-Zsh 指南
 
 [[TOC]]

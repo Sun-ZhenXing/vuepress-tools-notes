@@ -1,8 +1,3 @@
----
-title: Mermaid 流程图
-description: Mermaid 流程图
----
-
 # Mermaid 流程图
 
 [[TOC]]

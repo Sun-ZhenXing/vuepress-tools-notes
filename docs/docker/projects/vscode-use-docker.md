@@ -1,8 +1,3 @@
----
-title: VS Code 使用 Docker
-description: VS Code 使用 Docker
----
-
 # VS Code 使用 Docker
 
 [[TOC]]

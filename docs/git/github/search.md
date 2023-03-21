@@ -1,8 +1,3 @@
----
-title: GitHub 搜索技巧
-description: GitHub 搜索技巧
----
-
 # GitHub 搜索技巧
 
 GitHub 的搜索支持各种不同的操作，下面是一些常见搜索的快速技巧。如需更多信息，请访问 [搜索帮助](https://docs.github.com/articles/about-searching-on-github/)。

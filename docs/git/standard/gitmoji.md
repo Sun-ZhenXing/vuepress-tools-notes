@@ -1,8 +1,3 @@
----
-title: Git gitmoji 表情
-description: Git gitmoji 表情
----
-
 # gitmoji
 
 提交时使用表情是个好主意。访问 [gitmoji.dev](https://gitmoji.dev/) 来查看更多内容。

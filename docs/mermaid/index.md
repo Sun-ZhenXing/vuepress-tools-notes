@@ -1,8 +1,3 @@
----
-title: Mermaid
-description: Mermaid
----
-
 # Mermaid
 
 Mermaid 允许你使用文本和代码创建图表和可视化。

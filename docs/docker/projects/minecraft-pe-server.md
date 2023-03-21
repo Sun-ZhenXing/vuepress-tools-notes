@@ -1,8 +1,3 @@
----
-title: Docker 部署 Minecraft PE 服务器
-description: Docker 部署 Minecraft PE 服务器
----
-
 # Docker 部署 Minecraft PE 服务器
 
 [[TOC]]

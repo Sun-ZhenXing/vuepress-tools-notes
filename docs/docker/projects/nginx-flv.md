@@ -1,8 +1,3 @@
----
-title: Docker 部署 RTMP 流媒体服务器
-description: Docker 部署 RTMP 流媒体服务器
----
-
 # Docker 部署 RTMP 流媒体服务器
 
 Docker 部署 RTMP 流媒体服务器，在一端使用 RTMP 协议推流，并在前端播放直播内容。

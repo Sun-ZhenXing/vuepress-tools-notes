@@ -1,8 +1,3 @@
----
-title: SFTP
-description: SFTP
----
-
 # SFTP
 
 [[TOC]]

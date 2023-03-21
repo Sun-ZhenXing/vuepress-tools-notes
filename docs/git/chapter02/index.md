@@ -1,8 +1,3 @@
----
-title: Git 高级
-description: Git 高级
----
-
 # Git 高级
 
 ## 1. 忽略文件

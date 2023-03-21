@@ -1,8 +1,3 @@
----
-title: APT 使用代理
-description: APT 使用代理
----
-
 # APT 使用代理
 
 ::: warning

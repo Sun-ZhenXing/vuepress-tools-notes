@@ -1,8 +1,3 @@
----
-title: VS Code 插件
-description: VS Code 插件
----
-
 # VS Code 插件
 
 [[TOC]]
@@ -136,6 +131,7 @@ awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
 
 ### 2.9 其他
 
-| 插件 ID               | 功能       |
-| --------------------- | ---------- |
-| `ms-vscode.hexeditor` | HEX 编辑器 |
+| 插件 ID                                 | 功能       |
+| --------------------------------------- | ---------- |
+| `ms-vscode.hexeditor`                   | HEX 编辑器 |
+| `Cardinal90.multi-cursor-case-preserve` | 智能多光标 |

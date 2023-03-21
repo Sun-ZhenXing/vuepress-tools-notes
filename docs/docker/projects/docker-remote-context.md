@@ -1,8 +1,3 @@
----
-title: Docker 配置远程连接
-description: Docker 配置远程连接
----
-
 # Docker 配置远程连接
 
 作者通过 Windows 10 远程连接 Ubuntu 服务器内的 Docker，可以使用 VS Code/JetBrains IDE 的远程开发能力，从而可以快速切换 Docker 容器进行开发。

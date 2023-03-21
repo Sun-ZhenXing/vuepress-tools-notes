@@ -1,8 +1,3 @@
----
-title: Docker 搭建基本 Python 环境
-description: Docker 搭建基本 Python 环境
----
-
 # Docker 搭建基本 Python 环境
 
 [[TOC]]

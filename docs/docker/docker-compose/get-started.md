@@ -1,8 +1,3 @@
----
-title: Docker Compose 入门指南
-description: Docker Compose 入门指南
----
-
 # Docker Compose 入门指南
 
 [[TOC]]

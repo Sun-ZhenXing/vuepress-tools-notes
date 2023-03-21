@@ -1,8 +1,3 @@
----
-title: 时序图
-description: 时序图
----
-
 # 时序图
 
 [[TOC]]

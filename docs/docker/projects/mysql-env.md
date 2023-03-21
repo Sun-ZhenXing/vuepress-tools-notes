@@ -1,8 +1,3 @@
----
-title: Docker 搭建 MySQL 环境
-description: Docker 搭建 MySQL 环境
----
-
 # Docker 搭建 MySQL 环境
 
 [[TOC]]

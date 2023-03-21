@@ -1,8 +1,3 @@
----
-title: Git 约定式提交规范
-description: Git 约定式提交规范
----
-
 # 约定式提交
 
 [[TOC]]

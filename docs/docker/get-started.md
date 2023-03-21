@@ -1,8 +1,3 @@
----
-title: 开始使用
-description: 开始使用
----
-
 # 开始使用
 
 ## 1. 使用 Ubuntu 镜像

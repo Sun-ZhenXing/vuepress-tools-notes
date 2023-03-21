@@ -1,8 +1,3 @@
----
-title: GitHub 基础技巧
-description: GitHub 基础技巧
----
-
 ## 1. 文件查找
 
 ::: info GitHub 快捷指令

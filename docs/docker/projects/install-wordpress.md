@@ -1,8 +1,3 @@
----
-title: Docker 部署 WordPress
-description: Docker 部署 WordPress
----
-
 # Docker 部署 WordPress
 
 [[TOC]]

@@ -1,8 +1,3 @@
----
-title: Kubernets 简介
-description: Kubernets 简介
----
-
 # Kubernets
 
 [[TOC]]

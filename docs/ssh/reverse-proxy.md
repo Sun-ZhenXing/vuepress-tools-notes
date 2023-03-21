@@ -1,8 +1,3 @@
----
-title: SSH 反向代理
-description: SSH 反向代理
----
-
 # SSH 反向代理
 
 ## 1. 问题描述

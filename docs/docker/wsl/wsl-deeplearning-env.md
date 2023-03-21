@@ -1,8 +1,3 @@
----
-title: WSL2 中搭建深度学习环境
-description: WSL2 中搭建深度学习环境
----
-
 # WSL2 中搭建深度学习环境
 
 在 [Docker 搭建深度学习环境](../projects/deeplearning-env.md) 一文中，我们使用 Ubuntu 搭建了 Docker 下的深度学习环境。而 WSL2 同样也提供了完整的 CUDA 支持，我们可以在 Windows 下享受 Linux 环境下的优势。

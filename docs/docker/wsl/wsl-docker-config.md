@@ -1,8 +1,3 @@
----
-title: 基于 WSL2 的 Docker 配置说明
-description: 基于 WSL2 的 Docker 配置说明
----
-
 # 基于 WSL2 的 Docker 配置说明
 
 [[TOC]]

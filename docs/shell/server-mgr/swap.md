@@ -1,8 +1,3 @@
----
-title: 云服务器创建 swap 分区
-description: 云服务器创建 swap 分区
----
-
 # 云服务器创建 swap 分区
 
 [[TOC]]

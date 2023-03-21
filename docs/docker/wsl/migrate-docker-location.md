@@ -1,8 +1,3 @@
----
-title: 迁移 Docker 的位置
-description: 迁移 Docker 的位置
----
-
 # 迁移 Docker 的位置
 
 如果你需要在不同的盘或路径中迁移 WSL2 内的 Docker，你可以参考下面的步骤。

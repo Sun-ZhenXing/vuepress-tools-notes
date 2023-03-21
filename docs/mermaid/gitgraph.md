@@ -1,8 +1,3 @@
----
-title: Mermaid Git 图
-description: Mermaid Git 图
----
-
 # Mermaid Git 图
 
 [[TOC]]
