@@ -1,0 +1,1 @@
+import{_ as a,M as o,p as n,q as c,N as r,R as e,t as s}from"./framework-546207d5.js";const _={},d=e("h1",{id:"vim",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vim","aria-hidden":"true"},"#"),s(" Vim")],-1);function i(l,m){const t=o("AutoCatalog");return n(),c("div",null,[d,r(t)])}const f=a(_,[["render",i],["__file","index.html.vue"]]);export{f as default};
