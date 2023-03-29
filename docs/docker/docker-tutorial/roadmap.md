@@ -1,7 +1,5 @@
 # Docker 学习路线
 
-[[TOC]]
-
 ```mermaid
 mindmap
     root((Docker))
