@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-971d8dd6","path":"/vscode/how-to.html","title":"VS Code 如何","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"常用设置","slug":"常用设置","link":"#常用设置","children":[]}],"git":{"updatedTime":1679793162000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":2}]},"filePathRelative":"vscode/how-to.md"}');export{e as data};
