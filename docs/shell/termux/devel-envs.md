@@ -2,11 +2,15 @@
 
 ## 1. C/C++
 
+### 1.1 Clang
+
 目前没有对 GCC 的支持，有对 Clang 的支持：
 
 ```bash
 pkg install clang
 ```
+
+### 1.2 CMake
 
 如果需要使用 CMake，可以安装 CMake：
 
@@ -59,11 +63,15 @@ pkg install python2
 
 ## 3. Java
 
+### 3.1 OpenJDK
+
 目前仅支持 OpenJDK 17：
 
 ```bash
 pkg install openjdk-17
 ```
+
+### 3.2 Java 常见工具
 
 还有一些常见的工具：
 
@@ -73,15 +81,17 @@ pkg install gradle
 pkg install ant
 ```
 
+### 3.3 Kotlin
+
 同样支持 Kotlin：
 
 ```bash
 pkg install kotlin
 ```
 
-## 3. 其他常见语言环境
+## 4. 其他常见语言环境
 
-### 3.1 Node.js
+### 4.1 Node.js
 
 推荐安装 Node.js LTS 版本：
 
@@ -89,57 +99,57 @@ pkg install kotlin
 pkg install nodejs-lts
 ```
 
-### 3.2 Golang
+### 4.2 Golang
 
 ```bash
 pkg install golang
 ```
 
-### 3.3 Rust
+### 4.3 Rust
 
 ```bash
 pkg install rust
 ```
 
-### 3.4 Ruby
+### 4.4 Ruby
 
 ```bash
 pkg install ruby
 ```
 
-### 3.5 PHP
+### 4.5 PHP
 
 ```bash
 pkg install php
 ```
 
-### 3.6 Perl
+### 4.6 Perl
 
 ```bash
 pkg install perl
 ```
 
-### 3.7 Lua
+### 4.7 Lua
 
 ```bash
 pkg install lua54 liblua54
 ```
 
-### 3.8 Haskell
+### 4.8 Haskell
 
 ```bash
 pkg install ghc
 ```
 
-### 3.9 Swift
+### 4.9 Swift
 
 ```bash
 pkg install swift
 ```
 
-## 4. Web 服务环境
+## 5. Web 开发工具
 
-### 4.1  Nginx
+### 5.1  Nginx
 
 参见 [共享文件：使用 Nginx](./share-file.md#_1-2-使用-nginx)。
 
@@ -147,7 +157,7 @@ pkg install swift
 pkg install nginx
 ```
 
-### 4.2 MariaDB
+### 5.2 MariaDB
 
 目前仅支持 MariaDB，不过大部分命令兼容 MySQL：
 
@@ -164,7 +174,7 @@ nohup mysqld &
 pkill mysqld
 ```
 
-### 4.3 Redis
+### 5.3 Redis
 
 ```bash
 pkg install redis
