@@ -12,3 +12,4 @@
 | `terminal.integrated.defaultProfile.windows`   | 默认终端         |
 | `markdown.preview.doubleClickToSwitchToEditor` | 双击切换到编辑器 |
 | `markdown.preview.scrollEditorWithPreview`     | 预览时滚动编辑器 |
+| `terminal.integrated.cursorStyle`              | 光标样式         |
