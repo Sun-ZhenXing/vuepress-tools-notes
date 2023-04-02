@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-9dfe2270","path":"/shell/termux/","title":"Termux","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1680430060000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/termux/index.md"}');export{e as data};
