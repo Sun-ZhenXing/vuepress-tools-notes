@@ -65,7 +65,23 @@ pkg install python2
 pkg install openjdk-17
 ```
 
-## 4. Node.js
+还有一些常见的工具：
+
+```bash
+pkg install maven
+pkg install gradle
+pkg install ant
+```
+
+同样支持 Kotlin：
+
+```bash
+pkg install kotlin
+```
+
+## 3. 其他常见语言环境
+
+### 3.1 Node.js
 
 推荐安装 Node.js LTS 版本：
 
@@ -73,7 +89,65 @@ pkg install openjdk-17
 pkg install nodejs-lts
 ```
 
-## 5. MariaDB
+### 3.2 Golang
+
+```bash
+pkg install golang
+```
+
+### 3.3 Rust
+
+```bash
+pkg install rust
+```
+
+### 3.4 Ruby
+
+```bash
+pkg install ruby
+```
+
+### 3.5 PHP
+
+```bash
+pkg install php
+```
+
+### 3.6 Perl
+
+```bash
+pkg install perl
+```
+
+### 3.7 Lua
+
+```bash
+pkg install lua54 liblua54
+```
+
+### 3.8 Haskell
+
+```bash
+pkg install ghc
+```
+
+### 3.9 Swift
+
+```bash
+pkg install swift
+```
+
+## 4. Web 服务环境
+
+### 4.1  Nginx
+
+参见 [共享文件：使用 Nginx](./share-file.md#_1-2-使用-nginx)。
+
+```bash
+pkg install nginx
+```
+
+### 4.2 MariaDB
 
 目前仅支持 MariaDB，不过大部分命令兼容 MySQL：
 
@@ -90,22 +164,8 @@ nohup mysqld &
 pkill mysqld
 ```
 
-## 6. Nginx
-
-参见 [共享文件：使用 Nginx](./share-file.md#_1-2-使用-nginx)。
+### 4.3 Redis
 
 ```bash
-pkg install nginx
-```
-
-## 7. Golang
-
-```bash
-pkg install golang
-```
-
-## 8. Rust
-
-```bash
-pkg install rust
+pkg install redis
 ```
