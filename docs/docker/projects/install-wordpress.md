@@ -71,15 +71,7 @@ docker restart wordpress
 
 现在已经配置完成了，打开地址即可访问，上传限制也可以该为你设定的其他值。
 
-## 3. WordPress 容器内安装 Vim
-
-::: danger 修改系统库
-
-在 WordPress 容器内安装 `vim` 可能会遇到修改系统库 `libtinfo5` 的问题。`libtinfo5` 是系统基础库，修改可能触发系统崩溃。
-
-:::
-
-不建议更改容器内的设定，如果你一定需要的话可以按照下面设定进行：
+## 3. WordPress 容器内安装软件
 
 进入容器：
 
@@ -89,33 +81,20 @@ docker exec -it wordpress /bin/bash
 
 下面的操作都在容器中进行。
 
-先修改软件镜像源，可以使用下面的命令修改为清华源：
+先修改软件镜像源，可以使用下面的命令修改为清华源（当前最新的 WordPress 是基于 Debian 11，其他版本参考其他镜像地址）：
 
 ```bash
 mv /etc/apt/sources.list /etc/apt/sources.list-bak
 echo '
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main non-free contrib
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main non-free contrib
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main non-free contrib
-deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main non-free contrib
-deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main non-free contrib
-deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main non-free contrib
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security/ stretch/updates main non-free contrib
-deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security/ stretch/updates main non-free contrib
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
 ' > /etc/apt/sources.list
-apt update
 ```
 
 测试安装 `vim`：
 
 ```bash
-apt install -y vim
-```
-
-如果报错提示 `libtinfo5` 版本不对，重新安装 `libtinfo5`：
-
-```bash
-apt install -y libtinfo5 --allow-remove-essential
-apt install -y ncurses-base
 apt install -y vim
 ```
