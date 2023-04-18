@@ -10,6 +10,9 @@ devDependencies:
   '@vuepress/plugin-docsearch':
     specifier: 2.0.0-beta.61
     version: 2.0.0-beta.61(@algolia/client-search@4.17.0)(react-dom@16.14.0)(react@16.14.0)
+  '@vuepress/utils':
+    specifier: 2.0.0-beta.61
+    version: 2.0.0-beta.61
   vue:
     specifier: ^3.2.47
     version: 3.2.47

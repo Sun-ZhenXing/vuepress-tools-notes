@@ -1,9 +1,13 @@
+import process from 'node:process'
+import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { autoCatalogPlugin } from 'vuepress-plugin-auto-catalog'
 
+const __dirname = getDirname(import.meta.url)
+const isProd = process.env.NODE_ENV === 'production'
 const USER_NAME = 'Sun-ZhenXing'
 const BASE_PATH = '/vuepress-tools-notes/'
 
@@ -18,7 +22,12 @@ export default defineUserConfig({
   markdown: {
     code: {
       lineNumbers: 10
-    }
+    },
+    importCode: {
+      handleImportPath: str => str.replace(/^@/, path.resolve(
+        __dirname, '.',
+      )),
+    },
   },
   theme: defaultTheme({
     logo: '/favicon.svg',
@@ -128,6 +137,12 @@ export default defineUserConfig({
     }),
     copyCodePlugin({
       showInMobile: true
-    })
-  ]
+    }),
+  ],
+  alias: {
+    '@': path.resolve(
+      __dirname,
+      '.',
+    )
+  },
 })
