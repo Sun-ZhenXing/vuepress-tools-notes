@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c92f530e","path":"/shell/windows/cmd/","title":"Windows 常用 CMD 命令","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1681778567000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/windows/cmd/index.md"}');export{e as data};
