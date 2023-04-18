@@ -22,7 +22,7 @@
 
 【Q】如果我的数据集较大（或者在外置磁盘中），应该如何操作？
 
-【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。
+【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。（注意：这不适合大数据集，因为 WSL2 的跨文件系统 I/O 性能较差，如果希望在 WSL2 中使用高性能的 I/O，建议复制到 Linux 内）。
 
 【Q】如果我想使用 TensorBoard 或者 Jupyter 怎么办？
 
@@ -223,7 +223,7 @@ pip3 install ultralytics
 
 测试 YOLOv8 在 3070Ti 上的速度：
 
-```log
+```bash
 admin@f292841cc5bf:~$ yolo predict model=yolov8x.pt source="bus.jpg"
 Ultralytics YOLOv8.0.34 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192MiB)
 YOLOv8x summary (fused): 268 layers, 68200608 parameters, 0 gradients, 257.8 GFLOPs

@@ -1517,7 +1517,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001480
-      electron-to-chromium: 1.4.366
+      electron-to-chromium: 1.4.367
       node-releases: 2.0.10
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
     dev: true
@@ -2108,8 +2108,8 @@ packages:
       zrender: 5.4.3
     dev: true
 
-  /electron-to-chromium@1.4.366:
-    resolution: {integrity: sha512-XjC4pyf1no8kJe24nUfyexpWwiGRbZWXU/KbprSEvXcTXUlr3Zr5vK3lQt2to0ttpMhAc3iENccwPSKbnEW2Fg==}
+  /electron-to-chromium@1.4.367:
+    resolution: {integrity: sha512-mNuDxb+HpLhPGUKrg0hSxbTjHWw8EziwkwlJNkFUj3W60ypigLDRVz04vU+VRsJPi8Gub+FDhYUpuTm9xiEwRQ==}
     dev: true
 
   /elkjs@0.8.2:
