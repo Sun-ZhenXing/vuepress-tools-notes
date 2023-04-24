@@ -1,0 +1,8 @@
+import{_ as e,M as t,p as o,q as p,R as a,N as c,V as l,t as s,a1 as r}from"./framework-35c50e38.js";const i={},u=a("h1",{id:"云服务器创建-swap-分区",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#云服务器创建-swap-分区","aria-hidden":"true"},"#"),s(" 云服务器创建 swap 分区")],-1),d={class:"table-of-contents"},f=r(`<h2 id="_1-debian-ubuntu-系统" tabindex="-1"><a class="header-anchor" href="#_1-debian-ubuntu-系统" aria-hidden="true">#</a> 1. Debian/Ubuntu 系统</h2><p>许多云服务器提供商默认不提供 swap 分区，需要自行创建。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">su</span>
+
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero <span class="token assign-left variable">of</span><span class="token operator">=</span>/var/swap <span class="token assign-left variable">bs</span><span class="token operator">=</span><span class="token number">1024</span> <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">4096000</span>
+<span class="token function">mkswap</span> /var/swap
+<span class="token function">chmod</span> 0600 /var/swap
+<span class="token function">swapon</span> /var/swap
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;/var/swap swap swap defaults 0 0&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/fstab
+</code></pre></div>`,3);function _(b,k){const n=t("router-link");return o(),p("div",null,[u,a("nav",d,[a("ul",null,[a("li",null,[c(n,{to:"#_1-debian-ubuntu-系统"},{default:l(()=>[s("1. Debian/Ubuntu 系统")]),_:1})])])]),f])}const v=e(i,[["render",_],["__file","swap.html.vue"]]);export{v as default};
