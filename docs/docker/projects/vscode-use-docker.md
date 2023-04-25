@@ -4,7 +4,7 @@
 
 ## 1. 开始使用
 
-现在，我们可以在 Windows 或 Mac OS 上使用 Docker，不过需要 Docker Desktop 来管理 Docker 容器。而且 Windows 现在已经默认将 WSL2 作为 Docker 宿主，其效率远高于安装一个完整的虚拟机。
+现在，我们可以在 Windows 或 Mac OS 上使用 Docker，不过需要 Docker Desktop 来管理 Docker 容器。而且 Windows 现在已经默认将 WSL 2 作为 Docker 宿主，其效率远高于安装一个完整的虚拟机。
 
 VS Code 等开发工具提供了扩展，让你可以使用本地 Docker Desktop 服务。你可以创建容器化应用、将应用部署到容器以及调试容器上运行的应用。[^1]
 

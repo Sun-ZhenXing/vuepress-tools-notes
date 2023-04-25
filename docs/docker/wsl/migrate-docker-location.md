@@ -1,8 +1,8 @@
 # 迁移 Docker 的位置
 
-如果你需要在不同的盘或路径中迁移 WSL2 内的 Docker，你可以参考下面的步骤。
+如果你需要在不同的盘或路径中迁移 WSL 2 内的 Docker，你可以参考下面的步骤。
 
-退出 Docker Desktop，并确保所有 WSL2 容器已经关闭：
+退出 Docker Desktop，并确保所有 WSL 2 容器已经关闭：
 
 ```bash
 wsl --list -v

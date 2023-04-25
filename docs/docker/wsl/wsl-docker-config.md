@@ -1,4 +1,4 @@
-# 基于 WSL2 的 Docker 配置说明
+# 基于 WSL 2 的 Docker 配置说明
 
 [[TOC]]
 

@@ -65,7 +65,7 @@ LD_LIBRARY_PATH=. ./bedrock_server
 
 编写类似下面的 `Dockerfile`，注意下方代码仅供参考，需要结合自身服务器进行配置：
 
-```Dockerfile
+```dockerfile
 FROM ubuntu
 
 COPY bedrock-server-1.18.12.01.zip /server/

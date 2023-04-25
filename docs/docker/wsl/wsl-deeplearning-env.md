@@ -1,14 +1,14 @@
-# WSL2 中搭建深度学习环境
+# WSL 2 中搭建深度学习环境
 
-在 [Docker 搭建深度学习环境](../projects/deeplearning-env.md) 一文中，我们使用 Ubuntu 搭建了 Docker 下的深度学习环境。而 WSL2 同样也提供了完整的 CUDA 支持，我们可以在 Windows 下享受 Linux 环境下的优势。
+在 [Docker 搭建深度学习环境](../projects/deeplearning-env.md) 一文中，我们使用 Ubuntu 搭建了 Docker 下的深度学习环境。而 WSL 2 同样也提供了完整的 CUDA 支持，我们可以在 Windows 下享受 Linux 环境下的优势。
 
 [[TOC]]
 
-## 1. WSL2 进行深度学习的最佳实践
+## 1. WSL 2 进行深度学习的最佳实践
 
 【Q】为什么使用 Docker 进行深度学习？
 
-【A】WSL2 Docker 内执行速度大约为 Ubuntu 主机的 80%，带来了一些性能牺牲。但是 Docker 的优势远比这点损失来的多：
+【A】WSL 2 Docker 内执行速度大约为 Ubuntu 主机的 80%，带来了一些性能牺牲。但是 Docker 的优势远比这点损失来的多：
 
 - 随时启动和停止一个环境
 - 环境与主机隔离，主机可以正在做别的事情
@@ -16,13 +16,13 @@
 - 随意切换 CUDA 版本
 - 随时备份和恢复一个环境，可将镜像迁移到不同机器上运行
 
-【Q】为什么使用 WSL2 进行深度学习？
+【Q】为什么使用 WSL 2 进行深度学习？
 
 【A】可以同时使用 Linux 的训练环境和 Windows 的便捷界面，而且互不影响，可以协同工作。
 
 【Q】如果我的数据集较大（或者在外置磁盘中），应该如何操作？
 
-【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。（注意：这不适合大数据集，因为 WSL2 的跨文件系统 I/O 性能较差，如果希望在 WSL2 中使用高性能的 I/O，建议复制到 Linux 内）。
+【A】创建容器时使用 `-v host_path:container_path` 挂载路径，Windows 和 Docker 容器可共享此路径，这样可以直接在 Windows 下操作文件，然后在容器内训练，建议所有深度学习的容器都挂载同一个位置，方便共享数据。详细操作见下文。（注意：这不适合大数据集，因为 WSL 2 的跨文件系统 I/O 性能较差，如果希望在 WSL 2 中使用高性能的 I/O，建议复制到 Linux 内）。
 
 【Q】如果我想使用 TensorBoard 或者 Jupyter 怎么办？
 
@@ -34,7 +34,7 @@
 
 【Q】我在创建容器之后想修改容器的配置，如增加挂载和映射端口应该怎么做？
 
-【A】请参考 [基于 WSL2 的 Docker 配置说明](./wsl-docker-config.md)。
+【A】请参考 [基于 WSL 2 的 Docker 配置说明](./wsl-docker-config.md)。
 
 【Q】如果我想快速存取文件，例如取出权重文件，或指定测试文件，但是这个路径不在共享路径下怎么办？
 
@@ -82,13 +82,13 @@ pip3 install opencv-contrib-python-headless
 
 【A】Docker 可将容器导出为镜像，镜像可以随时备份为文件，可以迁移到其他电脑或其他任何环境。使用 `docker commit` 可导出容器为镜像，`docker save` 可将镜像压缩为一个文件。还可以使用 Docker Hub 共享镜像到社区。
 
-如果你希望把整个 WSL2 都备份了，可以使用 `wsl --export` 来导出为一个文件，详情见 [迁移 Docker 的位置](./migrate-docker-location.md)。
+如果你希望把整个 WSL 2 都备份了，可以使用 `wsl --export` 来导出为一个文件，详情见 [迁移 Docker 的位置](./migrate-docker-location.md)。
 
 ## 2. 条件准备
 
 - 主机是现代 CPU 且是 x86 架构，安装有现代的 NVIDIA 显卡
-- 需要 Windows 10 以上并安装有 WSL2。如果不了解如何安装可参考网络
-- 首先需要安装 Docker Desktop，这同时会安装 WSL2 的两个容器 `docker-desktop-data` 和 `docker-desktop`
+- 需要 Windows 10 以上并安装有 WSL 2。如果不了解如何安装可参考网络
+- 首先需要安装 Docker Desktop，这同时会安装 WSL 2 的两个容器 `docker-desktop-data` 和 `docker-desktop`
 
 ## 3. 如何使用
 
@@ -110,12 +110,12 @@ nvidia-smi
 
 - **不需要** 在 Windows 上安装 CUDA 驱动
 - **不需要** 在 Windows 上安装 cuDNN 组件
-- **不需要** 在 WSL2 内安装显卡驱动或其他
+- **不需要** 在 WSL 2 内安装显卡驱动或其他
 - **不需要** 在容器内安装 CUDA 或其他
 
 这就是全部了，如果上述条件都满足就可以使用 PyTorch、TensorFlow 或任何你需要的环境继续了？
 
-这是因为 WSL2 内核支持的 Docker 已经支持 `--gpus` 了（Docker 版本大于 19.03 即可），再也不需要 `nvidia-docker2` 来工作了。
+这是因为 WSL 2 内核支持的 Docker 已经支持 `--gpus` 了（Docker 版本大于 19.03 即可），再也不需要 `nvidia-docker2` 来工作了。
 
 ## 4. 安装 CUDA 容器
 
@@ -127,7 +127,7 @@ docker pull nvidia/cuda:11.6.0-base-ubuntu20.04
 
 创建容器，可指定参数：
 
-- 如果需要读外部数据请挂载目录或磁盘，如 `-v /mnt/d/docker_shared:/shared_data`（WSL2 内的磁盘路径为 `/mnt/c`、`/mnt/d`，对应 C、D 盘）
+- 如果需要读外部数据请挂载目录或磁盘，如 `-v /mnt/d/docker_shared:/shared_data`（WSL 2 内的磁盘路径为 `/mnt/c`、`/mnt/d`，对应 C、D 盘）
 - 如果需要使用 Jupyter Notebook 请映射端口，如 `-p 8888:8888`
 - 如果机器有多个显卡，可以指定其序号 `--gpus 1,3`，一块 GPU 只能分配到一个正在运行的容器内
 
