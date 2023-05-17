@@ -46,7 +46,13 @@ awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
 
 :::
 
+::: details 作者的插件列表
+
 作者的 `extensions-list.txt` 文件可在 [GitHub 仓库](https://github.com/Sun-ZhenXing/vuepress-tools-notes/tree/main/docs/vscode/extensions-list.txt) 中找到。
+
+@[code bash](./extensions-list.txt)
+
+:::
 
 ## 2. 插件收藏夹
 
@@ -104,7 +110,6 @@ awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
 | -------------------- | ---- |
 | `DotJoshJohnson.xml` |      |
 | `redhat.vscode-xml`  |      |
-
 
 ### 2.7 PDF 支持
 

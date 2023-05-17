@@ -18,7 +18,7 @@ export default defineUserConfig({
   title: '工具集合',
   description: '工具集合',
   head: [
-    ['link', { rel: 'icon', href: `${BASE_PATH}favicon.svg` }]
+    ['link', { rel: 'icon', href: `${BASE_PATH}favicon.svg` }],
   ],
   base: BASE_PATH,
   markdown: {
@@ -65,7 +65,6 @@ export default defineUserConfig({
     mdEnhancePlugin({
       gfm: true,
       container: true,
-      linkCheck: true,
       vPre: true,
       tabs: true,
       card: true,
@@ -74,6 +73,8 @@ export default defineUserConfig({
         resolvePath: file => {
           if (file.startsWith('@'))
             return file.replace('@', CURRENT_PATH)
+          if (file.startsWith('/'))
+            return file.replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
           return file
         },
       },
@@ -95,9 +96,9 @@ export default defineUserConfig({
             if (tag === 'em') return {
               tag: 'Badge',
               attrs: { type: 'danger' },
-              content: 'TODO'
+              content: 'TODO',
             }
-          }
+          },
         },
         {
           matcher: /@note:.+/,
