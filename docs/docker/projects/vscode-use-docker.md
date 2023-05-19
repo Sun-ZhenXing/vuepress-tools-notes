@@ -19,6 +19,7 @@ docker run -dp 80:80 docker/getting-started
 打开 `http://localhost/tutorial/` 可以看到 Docker 文档。
 
 为了使用 VS Code 的 Docker 功能，需要 VS Code 先安装下列扩展，新版本的 VS Code 已经默认安装：
+
 - `ms-azuretools.vscode-docker`
 - `ms-vscode-remote.remote-containers`
 

@@ -1,10 +1,11 @@
 import process from 'node:process'
 import { defineUserConfig, defaultTheme } from 'vuepress'
+import { getDirname, path } from '@vuepress/utils'
 import { autoCatalogPlugin } from 'vuepress-plugin-auto-catalog'
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { getDirname, path } from '@vuepress/utils'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 
 const __dirname = getDirname(import.meta.url)
 const isProd = process.env.NODE_ENV === 'production'
@@ -177,6 +178,7 @@ export default defineUserConfig({
     copyCodePlugin({
       showInMobile: true,
     }),
+    shikiPlugin({ theme: 'dark-plus' }),
   ],
   alias: {
     '@': CURRENT_PATH,

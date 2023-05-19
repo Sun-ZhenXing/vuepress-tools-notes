@@ -9,7 +9,7 @@
 从 GitHub 下载：
 
 ```bash
-export compose_version=v2.16.0
+export compose_version=v2.18.1
 sudo curl -L https://github.com/docker/compose/releases/download/${compose_version}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
 

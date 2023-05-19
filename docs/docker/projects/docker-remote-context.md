@@ -145,6 +145,7 @@ ssh-keygen
 ```
 
 回车两次，生成下面的文件：
+
 - `~/.ssh/id_rsa`
 - `~/.ssh/id_rsa.pub`
 
@@ -157,5 +158,7 @@ ssh <user>@<ip>
 ```
 
 ### 2.3 远程连接
+
+<!-- markdownlint-disable MD051 -->
 
 可以参考 [1.2 配置客户端](#_1-2-配置客户端)，只需要将 URL 替换为 `ssh://<user>@<ip>` 即可。

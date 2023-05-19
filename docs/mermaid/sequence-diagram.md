@@ -1,4 +1,4 @@
-# 时序图
+# Mermaid 时序图
 
 [[TOC]]
 
@@ -36,12 +36,13 @@ sequenceDiagram
 
 ### 2.1 参与者
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
     Alice-)John: See you later!
 ```
+
 ```mermaid
 sequenceDiagram
     Alice->>John: Hello John, how are you?
@@ -51,13 +52,14 @@ sequenceDiagram
 
 参与者（Participants）一般是对象，可以隐式定义，如上面的例子。默认按照图表源文本中的出现顺序呈现的。如果需要定义顺序可用用下面的语法：
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     participant Alice
     participant Bob
     Alice->>Bob: Hi Bob
     Bob->>Alice: Hi Alice
 ```
+
 ```mermaid
 sequenceDiagram
     participant Alice
@@ -70,13 +72,14 @@ sequenceDiagram
 
 如果你特别想使用角色（Actor）符号而不是矩形，你可以通过使用角色语句（`actor ..`）来实现，如下图所示。
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     actor Alice
     actor Bob
     Alice->>Bob: Hi Bob
     Bob->>Alice: Hi Alice
 ```
+
 ```mermaid
 sequenceDiagram
     actor Alice
@@ -89,13 +92,14 @@ sequenceDiagram
 
 别名语句（`.. as ..`）可以用简短标志表示一个标签。
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     participant A as Alice
     participant J as John
     A->>J: Hello John, how are you?
     J->>A: Great!
 ```
+
 ```mermaid
 sequenceDiagram
     participant A as Alice
@@ -108,7 +112,7 @@ sequenceDiagram
 
 组的语法是
 
-```text
+```mermaid:@vuepress/plugin-shiki
 box [color] [title]
     ...
 end
@@ -116,7 +120,7 @@ end
 
 其中 `color` 可以是 `transparent` 或 `rgb(33,66,99)` 所表示的演示，也可以使用 CSS 的关键字颜色。如果 `title` 的内容和颜色名称冲突可以使用 `transparent` 表示无颜色。
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     box Purple Alice & John
     participant A
@@ -131,6 +135,7 @@ sequenceDiagram
     A->>B: Hello Bob, how is Charly ?
     B->>C: Hello Charly, how are you?
 ```
+
 ```mermaid
 sequenceDiagram
     box Purple Alice & John
@@ -151,7 +156,7 @@ sequenceDiagram
 
 消息的语法如下：
 
-```text
+```mermaid:@vuepress/plugin-shiki
 [Actor][Arrow][Actor]: Message text
 ```
 
@@ -166,13 +171,14 @@ sequenceDiagram
 | `-)`   | 末端有开放箭头的实线（异步） |
 | `--)`  | 末端有开放箭头的虚线（异步） |
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     activate John
     John-->>Alice: Great!
     deactivate John
 ```
+
 ```mermaid
 sequenceDiagram
     Alice->>John: Hello John, how are you?
@@ -183,11 +189,12 @@ sequenceDiagram
 
 为了简化 `activate ..` 语句，可以使用 `+` / `-` 来表示消息的开始结束。
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     John-->>-Alice: Great!
 ```
+
 ```mermaid
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
@@ -196,13 +203,14 @@ sequenceDiagram
 
 消息可以叠加：
 
-```text
+```mermaid:@vuepress/plugin-shiki
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
     John-->>-Alice: Hi Alice, I can hear you!
     John-->>-Alice: I feel great!
 ```
+
 ```mermaid
 sequenceDiagram
     Alice->>+John: Hello John, how are you?

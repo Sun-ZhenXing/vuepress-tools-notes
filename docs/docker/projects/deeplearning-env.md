@@ -9,6 +9,7 @@
 ## 1. 安装 NVIDIA 显卡驱动
 
 条件：
+
 - 主机是 x86_64 架构计算机
 - 主机拥有 CUDA 支持的 NVIDIA 显卡
 - 主机安装 Ubuntu 20.04 或更高的系统，建议选择最稳定的，例如当前 Ubuntu 22 并未完全得到第三方支持，等到 Ubuntu 22 被各类生态支持后可以选择 Ubuntu 22
@@ -27,7 +28,7 @@ lspci | grep nouveau
 
 编辑文件 `/etc/modprobe.d/blacklist.conf`，如果没有则创建，末尾加入两行：
 
-```conf
+```properties
 blacklist nouveau
 options nouveau modeset=0
 ```
@@ -50,7 +51,6 @@ lspci | grep nouveau
 ### 1.2 从 NVIDIA 官网下载安装
 
 访问驱动下载的官方网站：<https://www.nvidia.cn/Download/index.aspx?lang=cn>，然后选择你的显卡。
-
 
 | 配置项   | 配置示例值              |
 | -------- | ----------------------- |

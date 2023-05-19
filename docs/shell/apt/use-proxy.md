@@ -16,7 +16,7 @@ sudo apt -o Acquire::socks::proxy="socks5://127.0.0.1:10808/" update
 
 保存配置到文件：
 
-```conf
+```properties
 Acquire::socks::proxy "socks5://127.0.0.1:1080/";
 ```
 

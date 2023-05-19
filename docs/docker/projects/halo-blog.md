@@ -13,6 +13,7 @@ mkdir ~/halo && cd ~/halo
 复制上述文档中的 `docker-compose.yml` 文件到当前目录。
 
 可以选择和 MySQL、PostgreSQL 配置项目：
+
 - `--halo.external-url=https://example.com/`：配置访问地址，如果不配置无法使用
 - `--spring.r2dbc.password=...`：配置数据库密码，两个地方都需要改
 - `--halo.security.initializer.superadminusername=admin`：配置管理员用户名
