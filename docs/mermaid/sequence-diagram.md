@@ -36,7 +36,7 @@ sequenceDiagram
 
 ### 2.1 参与者
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
@@ -52,7 +52,7 @@ sequenceDiagram
 
 参与者（Participants）一般是对象，可以隐式定义，如上面的例子。默认按照图表源文本中的出现顺序呈现的。如果需要定义顺序可用用下面的语法：
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     participant Alice
     participant Bob
@@ -72,7 +72,7 @@ sequenceDiagram
 
 如果你特别想使用角色（Actor）符号而不是矩形，你可以通过使用角色语句（`actor ..`）来实现，如下图所示。
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     actor Alice
     actor Bob
@@ -92,7 +92,7 @@ sequenceDiagram
 
 别名语句（`.. as ..`）可以用简短标志表示一个标签。
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     participant A as Alice
     participant J as John
@@ -112,7 +112,7 @@ sequenceDiagram
 
 组的语法是
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 box [color] [title]
     ...
 end
@@ -120,7 +120,7 @@ end
 
 其中 `color` 可以是 `transparent` 或 `rgb(33,66,99)` 所表示的演示，也可以使用 CSS 的关键字颜色。如果 `title` 的内容和颜色名称冲突可以使用 `transparent` 表示无颜色。
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     box Purple Alice & John
     participant A
@@ -156,7 +156,7 @@ sequenceDiagram
 
 消息的语法如下：
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 [Actor][Arrow][Actor]: Message text
 ```
 
@@ -171,7 +171,7 @@ sequenceDiagram
 | `-)`   | 末端有开放箭头的实线（异步） |
 | `--)`  | 末端有开放箭头的虚线（异步） |
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     activate John
@@ -189,7 +189,7 @@ sequenceDiagram
 
 为了简化 `activate ..` 语句，可以使用 `+` / `-` 来表示消息的开始结束。
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     John-->>-Alice: Great!
@@ -203,7 +203,7 @@ sequenceDiagram
 
 消息可以叠加：
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?

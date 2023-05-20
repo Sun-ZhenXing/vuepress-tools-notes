@@ -8,7 +8,7 @@ Git 图形是不同分支上的 Git 提交和 Git 操作（命令）的图形化
 
 Mermaid可以渲染Git图
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 gitGraph
    commit
    commit

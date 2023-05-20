@@ -12,7 +12,7 @@
 
 ### 普通结点
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 flowchart LR
     id
 ```
@@ -26,7 +26,7 @@ flowchart LR
 
 也可以在框中设置与id不同的文本。如果这样做了几次，将使用为该节点找到的最后一个文本。另外如果你以后为节点定义边，可以省略文本定义。渲染盒子时将使用之前定义的那个。
 
-```mermaid:@vuepress/plugin-shiki
+```mermaid:no-line-numbers
 flowchart LR
     id1[This is the text in the box]
 ```
