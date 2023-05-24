@@ -1,0 +1,1 @@
+import{_ as t,r as o,o as n,c,a as r,b as e,d as s}from"./app-6398a160.js";const d={},_=e("h1",{id:"linux-命令合集",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#linux-命令合集","aria-hidden":"true"},"#"),s(" Linux 命令合集")],-1);function i(l,u){const a=o("AutoCatalog");return n(),c("div",null,[_,r(a)])}const h=t(d,[["render",i],["__file","index.html.vue"]]);export{h as default};
