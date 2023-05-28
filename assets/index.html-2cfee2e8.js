@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5d418a0c","path":"/shell/windows/explorer/","title":"Windows 资源管理器","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1685282988000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/windows/explorer/index.md"}');export{e as data};
