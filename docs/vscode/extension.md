@@ -64,14 +64,14 @@ awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
 
 ### 2.1 MarkDown
 
-| 插件 ID                                                | 功能                                |
-| ------------------------------------------------------ | ----------------------------------- |
-| `yzhang.markdown-all-in-one`                           | 集成 MarkDown 编辑器                |
-| `mushan.vscode-paste-image`                            | `Ctrl + Alt + V` 粘贴剪切板上的图片 |
-| `bierner.markdown-mermaid`                             | Mermaid 预览                        |
-| `shd101wyy.markdown-preview-enhanced`                  |                                     |
-| `bpruitt-goddard.mermaid-markdown-syntax-highlighting` |                                     |
-| `bierner.markdown-emoji`                               |                                     |
+| 插件 ID                                                | 功能                         |
+| ------------------------------------------------------ | ---------------------------- |
+| `yzhang.markdown-all-in-one`                           | 集成 MarkDown 编辑器         |
+| `mushan.vscode-paste-image` *@note:过时*               | VS Code 现已内置粘贴图片功能 |
+| `bierner.markdown-mermaid`                             | Mermaid 预览                 |
+| `shd101wyy.markdown-preview-enhanced`                  |                              |
+| `bpruitt-goddard.mermaid-markdown-syntax-highlighting` |                              |
+| `bierner.markdown-emoji`                               |                              |
 
 ### 2.2 Git
 
@@ -93,10 +93,12 @@ awk '{ print "code --install-extension " $1; }' extensions-list.txt | sh -
 
 ### 2.4 智能代码生成
 
-| 插件 ID                | 功能                                                |
-| ---------------------- | --------------------------------------------------- |
-| `Blackboxapp.blackbox` | 免费的智能代码补全，用于代替 Copilot                |
-| `GitHub.copilot`       | GitHub 最火的 AI 代码工具 Copilot，价格为 $10 / mon |
+| 插件 ID                | 功能                                               |
+| ---------------------- | -------------------------------------------------- |
+| `Blackboxapp.blackbox` | 免费的智能代码补全，用于代替 Copilot               |
+| `GitHub.copilot`       | GitHub 流行的 AI 代码工具 Copilot，价格为 $10 / 月 |
+| `GitHub.copilot-chat`  | 由 Copilot 提供的 AI 聊天功能                      |
+| `GitHub.copilot-labs`  | GitHub Copilot 的实验性功能                        |
 
 ### 2.5 GLSL
 
