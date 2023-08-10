@@ -140,3 +140,26 @@ git push origin v1.2
 ```bash
 git push origin --tags
 ```
+
+## 5. 删除一个文件的全部历史
+
+确保当前没有未保存的更改：
+
+```bash
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch YOUR_FILE_PATH" --prune-empty --tag-name-filter cat -- --all
+```
+
+现在将全部记录重新上传：
+
+```bash
+git push origin --force --all
+git push origin --force --tags
+```
+
+对仓库执行垃圾回收：
+
+```bash
+git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+git reflog expire --expire=now --all
+git gc --prune=now
+```
