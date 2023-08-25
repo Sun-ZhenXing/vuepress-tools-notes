@@ -12,6 +12,7 @@ docker run -itd \
     --name mysql80 \
     -p 3306:3306 \
     -e MYSQL_ROOT_PASSWORD=root_password \
+    -e MYSQL_ROOT_HOST=% \
     -e TZ=Asia/Shanghai \
     mysql:8.0.32
 ```

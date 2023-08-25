@@ -9,8 +9,8 @@
 从 GitHub 下载：
 
 ```bash
-export compose_version=v2.18.1
-sudo curl -L https://github.com/docker/compose/releases/download/${compose_version}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+export compose_version=v2.20.3
+sudo curl -L https://github.com/docker/compose/releases/download/${latest}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
 
 <!-- 不要加入国内镜像！因为不可靠，暂时不考虑使用国内镜像。 -->
