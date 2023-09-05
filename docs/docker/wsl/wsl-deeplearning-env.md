@@ -1,6 +1,6 @@
 # WSL 2 中搭建深度学习环境
 
-在 [Docker 搭建深度学习环境](../projects/deeplearning-env.md) 一文中，我们使用 Ubuntu 搭建了 Docker 下的深度学习环境。而 WSL 2 同样也提供了完整的 CUDA 支持，我们可以在 Windows 下享受 Linux 环境下的优势。
+在 [Docker 搭建深度学习环境](../docker-tutorial/deeplearning-env.md) 一文中，我们使用 Ubuntu 搭建了 Docker 下的深度学习环境。而 WSL 2 同样也提供了完整的 CUDA 支持，我们可以在 Windows 下享受 Linux 环境下的优势。
 
 [[TOC]]
 
@@ -30,7 +30,7 @@
 
 【Q】如果我希望使用 IDE 在容器内开发程序，并进行调试，应该怎么做？
 
-【A】例如使用 VS Code 开发，需要安装 Docker 和远程开发插件。请参考 [VS Code 使用 Docker](../projects/vscode-use-docker.md)。同样的 PyCharm 和其他 JetBrain 系列 IDE 也支持容器内开发。推荐使用挂载到 Windows 下的路径进行开发，然后使用远程开发能力，在 Windows 下实时预览生成结果。
+【A】例如使用 VS Code 开发，需要安装 Docker 和远程开发插件。请参考 [VS Code 使用 Docker](../docker-tutorial/vscode-use-docker.md)。同样的 PyCharm 和其他 JetBrain 系列 IDE 也支持容器内开发。推荐使用挂载到 Windows 下的路径进行开发，然后使用远程开发能力，在 Windows 下实时预览生成结果。
 
 【Q】我在创建容器之后想修改容器的配置，如增加挂载和映射端口应该怎么做？
 
