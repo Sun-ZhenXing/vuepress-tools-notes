@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c9851a3c","path":"/shell/windows/cmd/call.html","title":"call 命令","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1693918759000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/windows/cmd/call.md"}');export{e as data};
