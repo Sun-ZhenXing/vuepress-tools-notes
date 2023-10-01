@@ -73,6 +73,7 @@ for image in client.images.list():
     print(image.tags)
 ```
 
-## 4. 容器 HealthCheck
+## 4. 容器 Health Check
 
 - 使用 [autoheal](https://github.com/willfarrell/docker-autoheal) 自动重启容器
+- `docker-compose` 的健康检查

@@ -1,5 +1,7 @@
 # Debian 系统操作合集
 
+[[TOC]]
+
 ## Node.js
 
 Node.js 18：
@@ -40,11 +42,11 @@ pnpm add -g http-server
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 ```
 
-## Docker Compose
+Docker Compose 现在已经是 Docker 的一部分，不需要单独安装。
 
 ```bash
-export COMPOSE_VERSION=v2.18.1
-sudo curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+echo "alias docker-compose='docker compose'" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## MySQL
