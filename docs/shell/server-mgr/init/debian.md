@@ -11,7 +11,8 @@
 ```bash
 apt update
 apt upgrade -y
-apt install sudo vim wget curl git zip unzip tar -y
+apt install sudo gnupg apt-transport-https ca-certificates
+apt install vim wget curl git zip unzip tar -y
 ```
 
 指定别名：
@@ -130,10 +131,13 @@ su admin
 安装基础工具：
 
 ```bash
-apt update
-apt upgrade -y
-apt install sudo vim wget curl git zip unzip tar -y
+sudo apt update
+sudo apt upgrade -y
+sudo apt install sudo gnupg apt-transport-https ca-certificates
+sudo apt install sudo vim wget curl git zip unzip tar -y
 ```
+
+再次执行上述指定别名的命令。
 
 ### 2.2 安装 Docker
 

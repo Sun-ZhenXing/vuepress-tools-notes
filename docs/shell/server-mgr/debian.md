@@ -2,20 +2,35 @@
 
 [[TOC]]
 
+## 基础构建工具
+
+GCC 等基础构建工具：
+
+```bash
+sudo apt install build-essential -y
+sudo apt install gcc make cmake -y
+```
+
+Clang、LLVM 等构建工具：
+
+```bash
+sudo apt install clang llvm -y
+```
+
 ## Node.js
 
 Node.js 18：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install nodejs -y
 ```
 
 Node.js 20：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install nodejs -y
 ```
 
 设置镜像和使用 `corepack`：
@@ -59,7 +74,7 @@ sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
 rm mysql-apt-config_0.8.25-1_all.deb
 
 sudo apt update
-sudo apt-get install mysql-server
+sudo apt install mysql-server -y
 ```
 
 ## OpenJDK
@@ -67,17 +82,37 @@ sudo apt-get install mysql-server
 默认版本：
 
 ```bash
-sudo apt install default-jdk
+sudo apt install default-jdk -y
 ```
 
 OpenJDK 11：
 
 ```bash
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-11-jdk -y
 ```
 
 OpenJDK 17：
 
 ```bash
-sudo apt install openjdk-17-jdk
+sudo apt install openjdk-17-jdk -y
+```
+
+## HTTP 服务器
+
+Nginx：
+
+```bash
+sudo apt install nginx -y
+```
+
+Apache：
+
+```bash
+sudo apt install apache2 -y
+```
+
+## Golang
+
+```bash
+sudo apt install golang -y
 ```
