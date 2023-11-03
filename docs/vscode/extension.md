@@ -28,7 +28,7 @@ code --list-extensions
 code --list-extensions --show-versions
 ```
 
-手动备份插件配置（加上 `--show-versions` 包含版本）：
+手动备份插件配置（如果需要包含版本加上 `--show-versions` 即可）：
 
 ```bash
 code --list-extensions > extensions-list.txt

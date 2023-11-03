@@ -1,11 +1,12 @@
 import process from 'node:process'
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { getDirname, path } from '@vuepress/utils'
+import { defaultTheme, defineUserConfig } from 'vuepress'
 import { autoCatalogPlugin } from 'vuepress-plugin-auto-catalog'
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { slug as slugify } from 'github-slugger'
 
 const __dirname = getDirname(import.meta.url)
 const isProd = process.env.NODE_ENV === 'production'
@@ -24,12 +25,16 @@ export default defineUserConfig({
   base: BASE_PATH,
   markdown: {
     code: {
-      lineNumbers: 10
+      lineNumbers: 10,
     },
     importCode: {
       handleImportPath: str => str
         .replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
         .replace(/^@/, CURRENT_PATH),
+    },
+    anchor: {
+      level: [1, 2, 3, 4, 5, 6],
+      slugify,
     },
   },
   theme: defaultTheme({
@@ -72,8 +77,8 @@ export default defineUserConfig({
       codetabs: true,
       include: {
         resolvePath: file => {
-          if (file.startsWith('@'))
-            return file.replace('@', CURRENT_PATH)
+          if (file.startsWith('@/'))
+            return file.replace(/^@\//, CURRENT_PATH)
           if (file.startsWith('/'))
             return file.replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
           return file

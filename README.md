@@ -1,4 +1,4 @@
-# VuePress Frontend Notes | 前端笔记
+# VuePress Tools Notes | 工具笔记
 
 ![actions status](https://img.shields.io/github/actions/workflow/status/Sun-ZhenXing/vuepress-tools-notes/deploy-docs.yml?branch=main)
 

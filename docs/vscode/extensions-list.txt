@@ -1,4 +1,6 @@
-afzalsayed96.icones
+adpyke.vscode-sql-formatter
+albymor.increment-selection
+antfu.goto-alias
 antfu.iconify
 antfu.unocss
 bierner.markdown-mermaid
@@ -12,14 +14,14 @@ donjayamanne.githistory
 DotJoshJohnson.xml
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
+GitHub.copilot
 GitHub.copilot-chat
 GitHub.copilot-labs
-GitHub.copilot-nightly
 GitHub.heygithub
 GitHub.remotehub
 github.vscode-github-actions
-golang.go
 hollowtree.vue-snippets
+huibizhang.codesnap-plus
 idleberg.icon-fonts
 jeff-hykin.better-cpp-syntax
 josetr.cmake-language-support-vscode
@@ -49,6 +51,8 @@ ms-vscode.hexeditor
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
 naumovs.color-highlight
+njpipeorgan.wolfram-language-notebook
+Nuxt.mdc
 PKief.material-icon-theme
 Prisma.prisma
 quicktype.quicktype
@@ -60,3 +64,4 @@ Vue.volar
 Vue.vscode-typescript-vue-plugin
 YRM.type-challenges
 yzhang.markdown-all-in-one
+zxh404.vscode-proto3

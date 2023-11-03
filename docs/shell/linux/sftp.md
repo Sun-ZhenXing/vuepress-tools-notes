@@ -23,6 +23,7 @@ sftp user_name@remote_server_address[:path]
 ```
 
 其中有一些常用的附加参数：
+
 - `-B`: buffer_size，制定传输 buffer 的大小，更大的 buffer 会消耗更多的内存，默认为 32768 bytes
 - `-P`: port，制定连接的端口号
 - `-R`: num_requests，制定一次连接的请求数，可以略微提升传输速度，但是会增加内存的使用量
