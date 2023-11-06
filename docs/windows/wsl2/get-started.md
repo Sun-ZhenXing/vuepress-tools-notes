@@ -2,7 +2,26 @@
 
 [[TOC]]
 
-## 1. 安装
+## 1. 准备
+
+需要 CPU 开启虚拟化，如果没有开启，可以在 BIOS 中开启。可以搜索 *你的电脑型号 + BIOS* 来了解如何进入 BIOS 设置。
+
+如果你是新版本 Windows，直接安装即可：
+
+```bash
+wsl --install
+```
+
+如果是旧版本，需要先启用 WSL2 功能，然后再安装。可以使用管理员运行下面的命令：
+
+```bash
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+重启后安装，如果有其他问题可参考 [官方文档：手动安装 WSL](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)。
+
+## 2. 安装
 
 如果系统支持，可以尝试命令安装：
 

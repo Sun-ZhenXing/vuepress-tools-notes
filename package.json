@@ -31,8 +31,8 @@
     "mermaid": "^10.6.0",
     "vue": "^3.3.7",
     "vuepress": "2.0.0-beta.67",
-    "vuepress-plugin-auto-catalog": "2.0.0-beta.244",
-    "vuepress-plugin-copy-code2": "2.0.0-beta.244",
-    "vuepress-plugin-md-enhance": "2.0.0-beta.244"
+    "vuepress-plugin-auto-catalog": "2.0.0-beta.245",
+    "vuepress-plugin-copy-code2": "2.0.0-beta.245",
+    "vuepress-plugin-md-enhance": "2.0.0-beta.245"
   }
 }
