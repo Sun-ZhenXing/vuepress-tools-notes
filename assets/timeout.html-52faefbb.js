@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-2c689612","path":"/shell/ssh/timeout.html","title":"超时配置","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1699257708000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/ssh/timeout.md"}');export{t as data};
