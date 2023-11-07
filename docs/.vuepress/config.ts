@@ -30,7 +30,7 @@ export default defineUserConfig({
     importCode: {
       handleImportPath: str => str
         .replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
-        .replace(/^@/, CURRENT_PATH),
+        .replace(/^@\//, CURRENT_PATH.replace(/(?:|\\|\/)$/, '/')),
     },
     anchor: {
       level: [1, 2, 3, 4, 5, 6],
