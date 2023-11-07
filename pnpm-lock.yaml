@@ -658,7 +658,7 @@ packages:
   /@mdit-vue/plugin-component@0.12.1:
     resolution: {integrity: sha512-L3elbvuKUufXwPLHrmJGd/ijd/QKxfcHXy3kRy4O+P7UIV7HSWePpfB0k+wWee+by3MviYYxjVAi392z+DGy3Q==}
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -666,7 +666,7 @@ packages:
     resolution: {integrity: sha512-C6ycNjrJ+T4JgbVxwo9cUkfLacOO841Yl8ogqd5PJmAVpc5cM2OLBkqqkZxNRXos3g9xM1VvIQ7gK/047UNADg==}
     dependencies:
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       gray-matter: 4.0.3
       markdown-it: 13.0.2
     dev: true
@@ -676,7 +676,7 @@ packages:
     dependencies:
       '@mdit-vue/shared': 0.12.1
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -684,7 +684,7 @@ packages:
     resolution: {integrity: sha512-6j332CsSqumy1+StIM3XphdXG1zj9NXuWestDJrKgS3OLy5P0EAioXScUYiZYysw61ZG+2pP37MW7Hg+eHbyIg==}
     dependencies:
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -693,7 +693,7 @@ packages:
     dependencies:
       '@mdit-vue/shared': 0.12.1
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -702,7 +702,7 @@ packages:
     dependencies:
       '@mdit-vue/shared': 0.12.1
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -710,7 +710,7 @@ packages:
     resolution: {integrity: sha512-bXgd0KThe4jC2leCFDFsyrudXIckvTwV4WnQK/rRMrXq0/BAuVdSNdIv1LGCWZxD5+oDyPyEPd0lalTIFwqsmg==}
     dependencies:
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -728,7 +728,7 @@ packages:
         optional: true
     dependencies:
       '@mdit/plugin-container': 0.6.5(markdown-it@13.0.2)
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -741,7 +741,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -754,7 +754,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -766,7 +766,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -779,7 +779,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -789,7 +789,7 @@ packages:
     peerDependencies:
       markdown-it: ^13.0.2
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -802,7 +802,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -815,7 +815,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -828,7 +828,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -840,7 +840,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
       upath: 2.0.1
     dev: true
@@ -858,8 +858,8 @@ packages:
         optional: true
     dependencies:
       '@mdit/plugin-tex': 0.6.5(markdown-it@13.0.2)
-      '@types/katex': 0.16.5
-      '@types/markdown-it': 13.0.5
+      '@types/katex': 0.16.6
+      '@types/markdown-it': 13.0.6
       katex: 0.16.9
       markdown-it: 13.0.2
     dev: true
@@ -873,7 +873,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -890,7 +890,7 @@ packages:
         optional: true
     dependencies:
       '@mdit/plugin-tex': 0.6.5(markdown-it@13.0.2)
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
       upath: 2.0.1
     dev: true
@@ -904,7 +904,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -917,7 +917,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -930,7 +930,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -942,7 +942,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -955,7 +955,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -968,7 +968,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -981,7 +981,7 @@ packages:
       markdown-it:
         optional: true
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -1033,43 +1033,43 @@ packages:
   /@types/fs-extra@11.0.3:
     resolution: {integrity: sha512-sF59BlXtUdzEAL1u0MSvuzWd7PdZvZEtnaVkzX5mjpdWTJ8brG0jUqve3jPCzSzvAKKMHTG8F8o/WMQLtleZdQ==}
     dependencies:
-      '@types/jsonfile': 6.1.3
+      '@types/jsonfile': 6.1.4
       '@types/node': 20.8.10
     dev: true
 
-  /@types/hash-sum@1.0.1:
-    resolution: {integrity: sha512-5JLywbPgWZVgxhAV//qTU6LPurKfQeiyw20GKZMi9V7AjHnAP4t1eNCJ1mC2L4TAicuS71MVoFYVcEM+EiR4lg==}
+  /@types/hash-sum@1.0.2:
+    resolution: {integrity: sha512-UP28RddqY8xcU0SCEp9YKutQICXpaAq9N8U2klqF5hegGha7KzTOL8EdhIIV3bOSGBzjEpN9bU/d+nNZBdJYVw==}
     dev: true
 
   /@types/js-yaml@4.0.8:
     resolution: {integrity: sha512-m6jnPk1VhlYRiLFm3f8X9Uep761f+CK8mHyS65LutH2OhmBF0BeMEjHgg05usH8PLZMWWc/BUR9RPmkvpWnyRA==}
     dev: true
 
-  /@types/jsonfile@6.1.3:
-    resolution: {integrity: sha512-/yqTk2SZ1wIezK0hiRZD7RuSf4B3whFxFamB1kGStv+8zlWScTMcHanzfc0XKWs5vA1TkHeckBlOyM8jxU8nHA==}
+  /@types/jsonfile@6.1.4:
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
     dependencies:
       '@types/node': 20.8.10
     dev: true
 
-  /@types/katex@0.16.5:
-    resolution: {integrity: sha512-DD2Y3xMlTQvAnN6d8803xdgnOeYZ+HwMglb7/9YCf49J9RkJL53azf9qKa40MkEYhqVwxZ1GS2+VlShnz4Z1Bw==}
+  /@types/katex@0.16.6:
+    resolution: {integrity: sha512-rZYO1HInM99rAFYNwGqbYPxHZHxu2IwZYKj4bJ4oh6edVrm1UId8mmbHIZLBtG253qU6y3piag0XYe/joNnwzQ==}
     dev: true
 
-  /@types/linkify-it@3.0.4:
-    resolution: {integrity: sha512-hPpIeeHb/2UuCw06kSNAOVWgehBLXEo0/fUs0mw3W2qhqX89PI2yvok83MnuctYGCPrabGIoi0fFso4DQ+sNUQ==}
+  /@types/linkify-it@3.0.5:
+    resolution: {integrity: sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==}
     dev: true
 
-  /@types/markdown-it-emoji@2.0.3:
-    resolution: {integrity: sha512-YjoZM0vP2KZSTwDh/5LamI58Cynk+lCfRJWM2nBAiWwclfyfj2wpaoDEo6ZVpH6Fn1f0RYs8q7u2biHL5YuEOg==}
+  /@types/markdown-it-emoji@2.0.4:
+    resolution: {integrity: sha512-H6ulk/ZmbDxOayPwI/leJzrmoW1YKX1Z+MVSCHXuYhvqckV4I/c+hPTf6UiqJyn2avWugfj30XroheEb6/Ekqg==}
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
     dev: true
 
-  /@types/markdown-it@13.0.5:
-    resolution: {integrity: sha512-QhJP7hkq3FCrFNx0szMNCT/79CXfcEgUIA3jc5GBfeXqoKsk3R8JZm2wRXJ2DiyjbPE4VMFOSDemLFcUTZmHEQ==}
+  /@types/markdown-it@13.0.6:
+    resolution: {integrity: sha512-0VqpvusJn1/lwRegCxcHVdmLfF+wIsprsKMC9xW8UPcTxhFcQtoN/fBU1zMe8pH7D/RuueMh2CaBaNv+GrLqTw==}
     dependencies:
-      '@types/linkify-it': 3.0.4
-      '@types/mdurl': 1.0.4
+      '@types/linkify-it': 3.0.5
+      '@types/mdurl': 1.0.5
     dev: true
 
   /@types/mdast@3.0.14:
@@ -1078,8 +1078,8 @@ packages:
       '@types/unist': 2.0.9
     dev: true
 
-  /@types/mdurl@1.0.4:
-    resolution: {integrity: sha512-ARVxjAEX5TARFRzpDRVC6cEk0hUIXCCwaMhz8y7S1/PxU6zZS1UMjyobz7q4w/D/R552r4++EhwmXK1N2rAy0A==}
+  /@types/mdurl@1.0.5:
+    resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==}
     dev: true
 
   /@types/ms@0.7.33:
@@ -1283,12 +1283,12 @@ packages:
       '@mdit-vue/plugin-toc': 0.12.1
       '@mdit-vue/shared': 0.12.1
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 13.0.5
-      '@types/markdown-it-emoji': 2.0.3
+      '@types/markdown-it': 13.0.6
+      '@types/markdown-it-emoji': 2.0.4
       '@vuepress/shared': 2.0.0-beta.67
       '@vuepress/utils': 2.0.0-beta.67
       markdown-it: 13.0.2
-      markdown-it-anchor: 8.6.7(@types/markdown-it@13.0.5)(markdown-it@13.0.2)
+      markdown-it-anchor: 8.6.7(@types/markdown-it@13.0.6)(markdown-it@13.0.2)
       markdown-it-emoji: 2.0.2
       mdurl: 1.0.1
     transitivePeerDependencies:
@@ -1327,7 +1327,7 @@ packages:
   /@vuepress/plugin-container@2.0.0-beta.67:
     resolution: {integrity: sha512-NuxjNkyJ2bYsRpw3iAiok2aeKYzZQsEZ8A/i+4LYwrDXbj3HfjlDhfPYhN+BMQfbxE9LpXOG0APNcXVCNMu0hw==}
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       '@vuepress/core': 2.0.0-beta.67
       '@vuepress/markdown': 2.0.0-beta.67
       '@vuepress/shared': 2.0.0-beta.67
@@ -1513,7 +1513,7 @@ packages:
     dependencies:
       '@types/debug': 4.1.11
       '@types/fs-extra': 11.0.3
-      '@types/hash-sum': 1.0.1
+      '@types/hash-sum': 1.0.2
       '@vuepress/shared': 2.0.0-beta.67
       debug: 4.3.4
       fs-extra: 11.1.1
@@ -1676,7 +1676,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001561
-      electron-to-chromium: 1.4.576
+      electron-to-chromium: 1.4.577
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: true
@@ -2256,8 +2256,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.576:
-    resolution: {integrity: sha512-yXsZyXJfAqzWk1WKryr0Wl0MN2D47xodPvEEwlVePBnhU5E7raevLQR+E6b9JAD3GfL/7MbAL9ZtWQQPcLx7wA==}
+  /electron-to-chromium@1.4.577:
+    resolution: {integrity: sha512-/5xHPH6f00SxhHw6052r+5S1xO7gHNc89hV7tqlvnStvKbSrDqc/u6AlwPvVWWNj+s4/KL6T6y8ih+nOY0qYNA==}
     dev: true
 
   /elkjs@0.8.2:
@@ -2716,13 +2716,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.5)(markdown-it@13.0.2):
+  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.6)(markdown-it@13.0.2):
     resolution: {integrity: sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
     dependencies:
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       markdown-it: 13.0.2
     dev: true
 
@@ -3788,7 +3788,7 @@ packages:
       '@mdit/plugin-tex': 0.6.5(markdown-it@13.0.2)
       '@mdit/plugin-uml': 0.6.5(markdown-it@13.0.2)
       '@types/js-yaml': 4.0.8
-      '@types/markdown-it': 13.0.5
+      '@types/markdown-it': 13.0.6
       '@vuepress/client': 2.0.0-beta.67
       '@vuepress/shared': 2.0.0-beta.67
       '@vuepress/utils': 2.0.0-beta.67
