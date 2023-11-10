@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-074d9524","path":"/shell/cmd/call.html","title":"call 命令","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1699601317000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"shell/cmd/call.md"}');export{e as data};
