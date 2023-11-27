@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3f6da79a","path":"/server/","title":"服务器管理","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1701071617000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"server/index.md"}');export{e as data};

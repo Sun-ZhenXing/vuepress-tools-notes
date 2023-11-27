@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5d681053","path":"/server/swap.html","title":"创建 swap 分区","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1701071617000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"server/swap.md"}');export{e as data};
