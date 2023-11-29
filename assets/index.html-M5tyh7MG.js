@@ -1,1 +1,0 @@
-import{_ as t,r as o,o as n,c as s,a as c,b as e,d as r}from"./app-RwYvieKW.js";const d={},_=e("h1",{id:"wsl2",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#wsl2","aria-hidden":"true"},"#"),r(" WSL2")],-1);function l(i,h){const a=o("AutoCatalog");return n(),s("div",null,[_,c(a)])}const m=t(d,[["render",l],["__file","index.html.vue"]]);export{m as default};
