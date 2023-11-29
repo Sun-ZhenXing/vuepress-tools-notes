@@ -70,7 +70,7 @@ export default defineUserConfig({
   plugins: [
     mdEnhancePlugin({
       gfm: true,
-      container: true,
+      hint: true,
       vPre: true,
       tabs: true,
       codetabs: true,
