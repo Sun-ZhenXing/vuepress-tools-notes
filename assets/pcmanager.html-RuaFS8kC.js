@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c40f4bf8","path":"/windows/pcmanager.html","title":"微软电脑管家","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1701323229000,"contributors":[{"name":"Sun-ZhenXing","email":"1006925066@qq.com","commits":1}]},"filePathRelative":"windows/pcmanager.md"}');export{e as data};
