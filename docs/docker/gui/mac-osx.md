@@ -16,7 +16,7 @@
 grep -Eoc '(vmx|svm)' /proc/cpuinfo
 ```
 
-安装 KVM 管理软件（以 Debian/Ubuntu 为例）：
+安装 KVM 管理软件（以 Debian/Ubuntu 为例，其他系统参见 [GitHub 项目主页文档](https://github.com/sickcodes/Docker-OSX)）：
 
 ```bash
 sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager
