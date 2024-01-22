@@ -22,12 +22,13 @@
 
 | 功能                     | 快捷键         |
 | ------------------------ | -------------- |
-| Python: 运行 Python 文件 | `Ctrl + D + R` |
 | 转换为 Kebab Case        | `Ctrl + D + K` |
 | 转换为首字母大写         | `Ctrl + D + T` |
 | 转换为大写               | `Ctrl + D + U` |
 | 转换为小写               | `Ctrl + D + L` |
 | 转换为驼峰大小写         | `Ctrl + D + C` |
+| 对导入进行排序           | `Ctrl + D + S` |
+| Python: 运行 Python 文件 | `Ctrl + D + R` |
 
 搜索 **用户** 可以看到自定义的全部快捷键。
 
@@ -44,6 +45,8 @@ code -d file1 file2
 ```
 
 不过这可能会自动打开一个新的 VS Code 窗口。
+
+VS Code 内使用了 Monaco Editor，这是一个非常优秀的编辑器，作者也通过 Monaco Editor 开发了一个 [在线的对比文件的页面](https://tools.alexsun.top/diff)，可以直接访问测试。
 
 ## 4. 使用代理
 

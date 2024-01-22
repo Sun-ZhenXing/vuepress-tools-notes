@@ -1,10 +1,37 @@
-# Oh-My-Zsh 指南
+# oh-my-zsh 指南
 
 [[TOC]]
 
-## 问题集合
+## 1. 安装
 
-更新失败：
+[oh-my-zsh](https://ohmyz.sh/) 是一个开源的 zsh 配置管理框架，提供了丰富的插件和主题。
+
+在 [oh-my-zsh](https://ohmyz.sh/) 官方网站所使用的安装方法：
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+国内推荐使用清华镜像：[^1]
+
+[^1]: ohmyzsh Git，清华大学开源软件镜像站，<https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/>
+
+```bash
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
+cd ohmyzsh/tools
+REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+```
+
+如果已经安装了 oh-my-zsh，用下面的命令切换到镜像：
+
+```bash
+git -C $ZSH remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
+git -C $ZSH pull
+```
+
+## 2. 问题
+
+遇到更新失败：
 
 ```bash
 omz update

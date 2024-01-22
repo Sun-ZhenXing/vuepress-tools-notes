@@ -3,6 +3,7 @@ albymor.increment-selection
 antfu.goto-alias
 antfu.iconify
 antfu.unocss
+bbenoist.QML
 bierner.markdown-mermaid
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss

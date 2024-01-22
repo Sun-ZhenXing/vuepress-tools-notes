@@ -151,6 +151,10 @@ ssh-keygen
 
 将 `id_rsa.pub` 文件的内容复制到远程服务器的 `~/.ssh/authorized_keys` 内即可。
 
+```bash
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
 现在可以直接登录远程服务器了：
 
 ```bash

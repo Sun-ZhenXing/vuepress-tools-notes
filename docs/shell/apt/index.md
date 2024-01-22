@@ -1,3 +1,3 @@
-# APT 指南
+# apt 指南
 
 <AutoCatalog />

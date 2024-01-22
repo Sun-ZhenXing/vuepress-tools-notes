@@ -1,3 +1,3 @@
-# Zsh 指南
+# zsh 指南
 
 <AutoCatalog />
