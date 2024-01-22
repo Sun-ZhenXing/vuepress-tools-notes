@@ -1,0 +1,1 @@
+import{_ as t,r as o,o as n,c,a as r,b as e,d as s}from"./app-9ZKrydrW.js";const d={},_=e("h1",{id:"服务器管理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#服务器管理","aria-hidden":"true"},"#"),s(" 服务器管理")],-1);function l(i,h){const a=o("AutoCatalog");return n(),c("div",null,[_,r(a)])}const m=t(d,[["render",l],["__file","index.html.vue"]]);export{m as default};
