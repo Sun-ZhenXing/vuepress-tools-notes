@@ -2,11 +2,13 @@ import process from 'node:process'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { getDirname, path } from '@vuepress/utils'
-import { defaultTheme, defineUserConfig } from 'vuepress'
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
 import { autoCatalogPlugin } from 'vuepress-plugin-auto-catalog'
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2'
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import { slug as slugify } from 'github-slugger'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url)
 const isProd = process.env.NODE_ENV === 'production'
@@ -37,6 +39,16 @@ export default defineUserConfig({
       slugify,
     },
   },
+  bundler: viteBundler({
+    // BUG: https://github.com/mermaid-js/mermaid/issues/4320
+    viteOptions: {
+      optimizeDeps: {
+        include: [
+          'mermaid',
+        ],
+      },
+    },
+  }),
   theme: defaultTheme({
     logo: '/favicon.svg',
     repo: `${USER_NAME}${BASE_PATH}`,
@@ -171,25 +183,7 @@ export default defineUserConfig({
         },
       },
     }),
-    autoCatalogPlugin({
-      orderGetter: ({ title, routeMeta }) => {
-        const BASE = 100000
-        if (routeMeta.order)
-          return routeMeta.order as number
-        const level2 = title.match(/^(\d+)\.(\d+)/)
-        if (level2)
-          return BASE + Number.parseInt(level2[1]) * 1000 + Number.parseInt(level2[2])
-        const level1 = title.match(/^(\d+)\./)
-        if (level1)
-          return BASE + Number.parseInt(level1[1]) * 1000
-        const suffix = title.match(/\d+$/)
-        if (suffix)
-          return BASE + Number.parseInt(suffix[0]) * 1000
-        if (title)
-          return BASE + title.charCodeAt(0) * 1000 + (title.charCodeAt(1) || 0)
-        return 0
-      },
-    }),
+    autoCatalogPlugin({}),
     copyCodePlugin({
       showInMobile: true,
     }),
