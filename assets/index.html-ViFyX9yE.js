@@ -1,0 +1,1 @@
+import{_ as n,r as o,o as a,c,a as s,b as e}from"./app-THZs9_px.js";const r={},_=e("h1",{id:"winget-使用指南",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#winget-使用指南"},[e("span",null,"winget 使用指南")])],-1);function l(i,d){const t=o("AutoCatalog");return a(),c("div",null,[_,s(t)])}const h=n(r,[["render",l],["__file","index.html.vue"]]);export{h as default};

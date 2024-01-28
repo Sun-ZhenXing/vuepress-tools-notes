@@ -1,0 +1,1 @@
+import{_ as a,r as t,o as n,c as s,a as l,b as e}from"./app-THZs9_px.js";const c={},r=e("h1",{id:"shell",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#shell"},[e("span",null,"Shell")])],-1);function _(d,h){const o=t("AutoCatalog");return n(),s("div",null,[r,l(o)])}const f=a(c,[["render",_],["__file","index.html.vue"]]);export{f as default};
