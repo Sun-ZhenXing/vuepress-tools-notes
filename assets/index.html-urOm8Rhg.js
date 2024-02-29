@@ -1,0 +1,1 @@
+import{_ as o,r as t,o as n,c as r,a as c,b as e}from"./app-DBeBKcYQ.js";const s={},_=e("h1",{id:"mermaid",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#mermaid"},[e("span",null,"Mermaid")])],-1);function d(l,i){const a=t("AutoCatalog");return n(),r("div",null,[_,c(a)])}const f=o(s,[["render",d],["__file","index.html.vue"]]);export{f as default};

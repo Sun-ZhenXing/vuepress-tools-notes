@@ -1,0 +1,1 @@
+import{_ as t,r as o,o as n,c,a as s,b as e}from"./app-DBeBKcYQ.js";const r={},_=e("h1",{id:"apt-指南",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#apt-指南"},[e("span",null,"apt 指南")])],-1);function l(d,i){const a=o("AutoCatalog");return n(),c("div",null,[_,s(a)])}const f=t(r,[["render",l],["__file","index.html.vue"]]);export{f as default};

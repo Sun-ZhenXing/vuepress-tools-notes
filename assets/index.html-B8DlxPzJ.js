@@ -1,0 +1,1 @@
+import{_ as a,r as t,o as n,c as s,a as c,b as e}from"./app-DBeBKcYQ.js";const r={},_=e("h1",{id:"zsh-指南",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#zsh-指南"},[e("span",null,"zsh 指南")])],-1);function l(d,h){const o=t("AutoCatalog");return n(),s("div",null,[_,c(o)])}const f=a(r,[["render",l],["__file","index.html.vue"]]);export{f as default};

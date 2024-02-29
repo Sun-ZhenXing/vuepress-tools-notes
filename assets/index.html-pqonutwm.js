@@ -1,1 +1,0 @@
-import{_ as o,r as a,o as t,c,a as s,b as e}from"./app-THZs9_px.js";const r={},l=e("h1",{id:"linux-命令合集",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#linux-命令合集"},[e("span",null,"Linux 命令合集")])],-1);function _(i,d){const n=a("AutoCatalog");return t(),c("div",null,[l,s(n)])}const x=o(r,[["render",_],["__file","index.html.vue"]]);export{x as default};

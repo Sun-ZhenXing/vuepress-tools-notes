@@ -1,1 +1,0 @@
-import{_ as a,r as t,o as n,c,a as s,b as e}from"./app-THZs9_px.js";const r={},_=e("h1",{id:"vs-code",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vs-code"},[e("span",null,"VS Code")])],-1);function d(l,i){const o=t("AutoCatalog");return n(),c("div",null,[_,s(o)])}const h=a(r,[["render",d],["__file","index.html.vue"]]);export{h as default};

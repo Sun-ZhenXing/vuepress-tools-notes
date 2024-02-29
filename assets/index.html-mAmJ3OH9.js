@@ -1,0 +1,1 @@
+import{_ as o,r as a,o as n,c as r,a as c,b as e}from"./app-DBeBKcYQ.js";const s={},_=e("h1",{id:"termux",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#termux"},[e("span",null,"Termux")])],-1);function l(d,m){const t=a("AutoCatalog");return n(),r("div",null,[_,c(t)])}const i=o(s,[["render",l],["__file","index.html.vue"]]);export{i as default};
